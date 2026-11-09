@@ -1,0 +1,19 @@
+/* Physical book layers sit beneath the folding HTML sheets. */
+body{background:radial-gradient(ellipse at 45% 30%,#7b688d 0%,#615078 58%,#493b5c 100%);overflow-x:hidden}
+.book{perspective:none;isolation:auto;transform:rotate(-1deg);filter:drop-shadow(0 26px 20px #21162d55);touch-action:pan-y}
+.book-cover{position:absolute;inset:-2px -4px -5px -2px;background:#79534a;border-radius:3px 6px 6px 3px;box-shadow:inset 0 1px 1px #b19b7c,inset -1px -2px 2px #49372f,1px 3px 3px #36212d40;transform:rotate(.15deg)}
+.paper-stack{inset:1px -5px -6px 0;border-radius:2px 5px 5px 2px;transform:none;background:repeating-linear-gradient(0deg,#d1cab4 0px,#eee8d5 1px,#eee8d5 2px,#bfb79f 3px);box-shadow:2px 2px 1px #51433066,5px 6px 7px #21132d30}
+.paper-stack:before,.paper-stack:after{content:'';position:absolute;inset:1px 0 3px 0;background:#e4deca;border-radius:3px;box-shadow:0 1px 1px #81765f66;transform:rotate(1.1deg);transform-origin:left center}
+.paper-stack:after{inset:0 1px 4px 0;transform:rotate(.5deg);background:#ece7d4}
+.book-spine{position:absolute;z-index:0;left:-2px;top:0;bottom:-3px;width:5px;border-radius:3px 0 0 3px;background:linear-gradient(90deg,#71584a,#a48d70 45%,#c2b59a);pointer-events:none;box-shadow:-1px 1px 2px #2e211b25}
+#pages{z-index:1;width:100%;height:100%;position:absolute;inset:0;transform-style:flat;min-width:0!important;min-height:0!important}
+.page{border-radius:2px 4px 5px 2px;backface-visibility:visible;will-change:auto;box-shadow:inset 18px 0 22px -20px #51463480,inset -1px 0 2px #74644d25;background-color:var(--paper)}
+.page:before{content:'';position:absolute;inset:0;z-index:4;pointer-events:none;border-radius:inherit;background:linear-gradient(90deg,#554c3520 0%,#554c3510 1.5%,#fff8df20 4%,transparent 10%,#ffffff0d 40%,transparent 85%,#fff9e420 97%,#5d4b2515 100%)}
+.page:after{z-index:5}
+.page.--left{box-shadow:inset -16px 0 21px -15px #3e302577}
+.page.--left:before{transform:scaleX(-1)}
+.photo{box-shadow:1px 2px 3px #30231450,0 0 1px #fff9e7;border:1px solid #fffcdf88}
+.cover .p1:after,.cover .p3:after{content:'';position:absolute;top:0;left:24%;width:49%;height:8px;background:#d2bc8c88;transform:rotate(-5deg);border-left:1px dotted #fff8e199;border-right:1px dotted #fff8e199}
+.stf__parent{overflow:visible!important}.stf__wrapper{overflow:visible!important}
+.book.is-turning{cursor:grabbing}.book{cursor:grab}
+@media(prefers-reduced-motion:reduce){.book{transform:none}}

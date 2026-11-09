@@ -1,0 +1,42 @@
+/* Photo jigsaw: shared curved edges fit together without gaps. */
+.puzzle-content .puzzle-board{display:block;position:relative;aspect-ratio:4/3;padding:0;border:0;background:#eee6d8;box-shadow:0 12px 28px #17050b55;isolation:isolate;overflow:hidden}
+.puzzle-board .puzzle-piece{position:absolute;display:block;padding:0;margin:0;border:0;background:none;aspect-ratio:auto;box-shadow:none;outline:none;transition:filter .15s;clip-path:var(--piece-outline);touch-action:none}
+.puzzle-piece svg{display:block;width:100%;height:100%;overflow:visible;pointer-events:none}
+.puzzle-piece .piece-seam{fill:none;stroke:#261f19;stroke-opacity:.65;stroke-width:1;vector-effect:non-scaling-stroke}
+.puzzle-board .puzzle-piece.selected,.puzzle-board .puzzle-piece:focus-visible{z-index:3;filter:brightness(1.18);outline:none}
+.puzzle-piece.selected .piece-seam,.puzzle-piece:focus-visible .piece-seam{stroke:#ffe0a0;stroke-opacity:1;stroke-width:2.5}
+.puzzle-board.is-previewing:after{inset:0;background-image:url('assets/Puzzle.jpeg');background-size:100% 100%}
+
+/* Fit the entire puzzle and its controls into one screen. */
+body:has(.puzzle-scene){padding:0;min-height:100svh;display:grid;place-items:center}
+.birthday-story:has(.puzzle-scene){width:min(100%,500px);height:100svh;min-height:0;max-height:100svh;overflow:hidden;container-type:size}
+.puzzle-scene.scene{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;min-height:0;padding:90px 24px 80px;overflow:hidden}
+.puzzle-scene .puzzle-content{position:relative;top:auto;left:auto;margin:0;width:min(100%,360px,calc((100svh - 340px) * 1.333333));max-width:100%}
+.puzzle-scene .puzzle-content h1{font-size:clamp(25px,7cqw,36px);line-height:1.05;margin:0 0 10px}
+.puzzle-scene .puzzle-content>p{font-size:10px;line-height:1.5;margin:0 0 16px}
+.puzzle-scene .puzzle-content #puzzleHint{margin:12px 0 7px;font-size:9px}
+.puzzle-scene .birthday-label{top:28px;padding-bottom:12px}
+.puzzle-scene .journey{bottom:22px;padding-top:12px}
+.puzzle-scene .puzzle-board{width:100%;height:auto;aspect-ratio:4/3;flex-shrink:0}
+@media(max-height:540px){
+ .puzzle-scene.scene{padding:60px 18px 55px}
+ .puzzle-scene .puzzle-content{width:min(100%,300px,calc((100svh - 240px) * 1.333333))}
+ .puzzle-scene .puzzle-content h1{font-size:22px;margin-bottom:6px}
+ .puzzle-scene .puzzle-content>p{font-size:9px;margin-bottom:8px}
+ .puzzle-scene .birthday-label{top:12px;padding-bottom:6px}
+ .puzzle-scene .journey{bottom:10px;padding-top:6px}
+ .puzzle-scene .puzzle-content #puzzleHint{font-size:8px;margin:7px 0 3px}
+}
+
+/* Explicit positioning prevents button baseline layout from shifting the artwork. */
+.puzzle-board .puzzle-piece{appearance:none;-webkit-appearance:none;background-repeat:repeat;overflow:hidden}
+.puzzle-board .puzzle-piece svg{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;margin:0;padding:0}
+
+.shuffle-puzzle{display:block;margin:14px 0 0;padding:9px 15px;background:#c5a467;color:#351019;border:1px solid #c5a467;border-radius:2px;font:500 11px/1.4 'DM Sans',Arial,sans-serif}
+.shuffle-puzzle:hover{background:#dfc38d}
+.puzzle-scene .puzzle-content{width:min(100%,360px,calc((100svh - 380px) * 1.333333))}
+@media(max-height:540px){.puzzle-scene .puzzle-content{width:min(100%,300px,calc((100svh - 280px) * 1.333333))}.shuffle-puzzle{margin-top:8px;padding:5px 10px}}
+
+/* A clipped board cannot scroll when an overlapping bottom piece receives focus. */
+.puzzle-content .puzzle-board{overflow:clip;overflow-anchor:none;aspect-ratio:auto}
+.puzzle-board .puzzle-piece{min-width:0;min-height:0;max-width:none;max-height:none;flex:none}

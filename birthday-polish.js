@@ -1,0 +1,9 @@
+﻿'use strict';
+// Shared invitation details keep every part of the existing birthday journey intact.
+document.querySelectorAll('.scene:not(.collage-scene)').forEach(scene=>{
+ const kind=scene.classList.contains('puzzle-scene')?'puzzle':scene.classList.contains('cake-scene')?'cake':'gift';
+ const nav=document.createElement('nav');nav.className='journey';nav.setAttribute('aria-label','Your birthday surprises');
+ [['puzzle','index.html','The puzzle'],['cake','cake.html','Make a wish'],['gift','gift.html','Your gift']].forEach(([id,url,title],i)=>{const a=document.createElement('a');a.href=url;a.innerHTML=`<span>${i+1}</span>${title}`;if(id===kind)a.setAttribute('aria-current','page');nav.append(a);});scene.append(nav);
+});
+const puzzleBoard=document.getElementById('puzzle');
+if(puzzleBoard){const hint=document.getElementById('puzzleHint');hint.textContent='Tap two pieces to swap · or drag them into place';const preview=document.createElement('button');preview.className='preview-button';preview.type='button';preview.textContent='A tiny hint? ♡';preview.setAttribute('aria-pressed','false');preview.setAttribute('aria-label','Show the complete puzzle photo');hint.after(preview);preview.addEventListener('click',()=>{const active=puzzleBoard.classList.toggle('is-previewing');preview.setAttribute('aria-pressed',String(active));preview.textContent=active?'Back to my puzzle ↩':'A tiny hint? ♡';preview.setAttribute('aria-label',active?'Hide the complete puzzle photo':'Show the complete puzzle photo');});puzzleBoard.addEventListener('pointerdown',()=>{if(!puzzleBoard.classList.contains('is-previewing'))return;puzzleBoard.classList.remove('is-previewing');preview.setAttribute('aria-pressed','false');preview.textContent='A tiny hint? ♡';preview.setAttribute('aria-label','Show the complete puzzle photo');},true);}

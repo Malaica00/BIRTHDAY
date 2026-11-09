@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head><base href="../">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#3e131b">
+  <title>Aarha ? a birthday scrapbook</title>
+  <meta name="description" content="A little book of everyday memories. Swipe to turn the pages.">
+  <link rel="stylesheet" href="scrapbook.css">
+  <link rel="stylesheet" href="scrapbook-book.css">
+  <script src="memories.js?v=1" defer></script><script src="scrapbook.js?v=7" defer></script>
+ <link rel="stylesheet" href="theme.css?v=1">
+ <link rel="stylesheet" href="keepsakes.css?v=1">
+ <link rel="stylesheet" href="birthday-background.css?v=9">
+ <link rel="stylesheet" href="scrapbook-motion.css?v=3">
+ <link rel="stylesheet" href="scrapbook-vintage.css?v=2">
+</head>
+<body>
+  <div class="page-lace-border scrapbook-lace-border" aria-hidden="true"></div>
+  <header class="topbar"><a href="gift.html" aria-label="Back to your gift">← <span>back to your gift</span></a></header>
+  <main>
+    <div class="eyebrow">FOR AARHA, WITH LOVE</div>
+    <div class="book" id="book" aria-label="Scrapbook" tabindex="0"><div class="book-cover" aria-hidden="true"></div><div class="paper-stack" aria-hidden="true"></div><div class="book-spine" aria-hidden="true"></div><div id="pages"></div></div>
+    <nav class="navigation" aria-label="Book pages"><button id="previous" aria-label="Previous page">←</button><div><span id="counter" aria-live="polite">01 / 08</span><div id="dots" class="dots"></div></div><button id="next" aria-label="Next page">→</button></nav>
+    <p class="hint">drag a corner or swipe to turn <span>↔</span></p>
+  </main>
+<script>addEventListener('load',async()=>{const results=[];for(const el of [document.body,document.querySelector('main'),document.querySelector('.book-stage'),book]){results.push([el.className||el.tagName,el.clientWidth,getComputedStyle(el).width,el.getBoundingClientRect().width]);}for(let i=0;i<leaves.length;i++){await turn(i);results.push({page:i+1,title:pages.querySelectorAll('.leaf-front')[i].getAttribute('aria-label'),counter:document.getElementById('counter').textContent});}await closeBook();results.push({restarted:flippedCount===0,photos:[...pages.querySelectorAll('img')].every(i=>i.complete&&i.naturalWidth>0),age:/twenty|\b23\b|years old/i.test(pages.textContent)});const pre=document.createElement('pre');pre.id='qa';pre.textContent=JSON.stringify(results);document.body.append(pre);});</script></body>
+</html>

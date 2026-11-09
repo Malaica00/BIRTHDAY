@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+ <meta name="theme-color" content="#3e131b"><meta name="description" content="A birthday surprise, one little moment at a time.">
+ <title>Your special delivery</title>
+ <link rel="stylesheet" href="birthday.css?v=6"><script src="birthday-shared.js?v=9" defer></script><script src="memories.js?v=1" defer></script><script src="gift.js?v=16" defer></script>
+ <link rel="stylesheet" href="theme.css?v=1">
+ <link rel="stylesheet" href="birthday-polish.css?v=2"><script src="birthday-polish.js?v=3" defer></script>
+ <link rel="stylesheet" href="keepsakes.css?v=1">
+ <link rel="stylesheet" href="vinyl.css?v=3">
+ <link rel="stylesheet" href="birthday-background.css?v=9">
+ <link rel="stylesheet" href="gift-ribbon.css?v=4">
+ <link rel="stylesheet" href="envelope-gallery.css?v=9">
+ <link rel="stylesheet" href="collage-polish.css?v=2">
+ <link rel="stylesheet" href="envelope-motion.css?v=1">
+ <link rel="stylesheet" href="memory-photos.css?v=6">
+</head>
+<body>
+ <main class="birthday-story" id="story">
+  <section class="scene active gift-scene" id="giftScene" aria-label="Your special delivery">
+   <div class="page-lace-border" aria-hidden="true"></div>
+   <h2>Special<br>Delivery</h2><button class="present" id="present" type="button" aria-label="Unwrap your special gift"><span class="gift-art"><img src="assets/gift-transparent.png" alt="A white gift box with a red ribbon, ivory lace bow, and heart wax seal"><img class="gift-lace-accent" src="assets/gift-lace-bow.png" alt="" aria-hidden="true"><img class="gift-mini-seal" src="assets/gift-heart-seal.png" alt="" aria-hidden="true"><span class="gift-personal-tag" aria-hidden="true"><span>for you</span><small>with love</small></span></span></button><button class="unwrap-copy" id="unwrap">Unwrap your surprise &rarr;</button>
+  </section>
+  <section class="scene collage-scene" id="collageScene" aria-label="Your birthday gifts" hidden>
+   <div class="page-lace-border" aria-hidden="true"></div>
+   <button class="sticker envelope" id="envelope" aria-label="Open your birthday letter"><img class="cream-envelope-art" src="assets/cream-embossed-envelope.png" alt="A closed ivory embossed envelope with a burgundy wax seal"></button>
+   <button class="sticker disco" id="disco" aria-label="Spin the disco ball" aria-pressed="false"><img src="assets/disco-hq.png" alt="Disco ball"></button>
+   <img class="sticker birthday-sticker" src="assets/birthday.png" alt="Happy Birthday">
+   <button class="sticker camera" id="camera" aria-label="Open the camera and print a film strip"><img src="assets/cam.png" alt="Polaroid camera"></button>
+   <button class="sticker record" id="record" aria-label="Play birthday music" title="Play birthday music" aria-pressed="false"><img src="assets/vinly.png?v=2" alt="A black vinyl record with silver stars and a red centre label"></button>
+   <button class="sticker love" id="love" aria-label="A little birthday note"><img src="assets/love-hq.png" alt="I love you"></button>
+   <a class="sticker memory-book" href="Scrapbook.html" aria-label="Open your memory book"><img src="assets/Vintage Memory Book Scrapbook Cover.png" alt="Vintage memory book"></a>
+   <button class="sticker cat" id="cat" aria-label="Make the party cat dance" aria-pressed="false"><img src="assets/cat-hq.png" alt="Cat in a party hat"></button>
+  </section>
+  <p class="sr-only" id="announcement" role="status" aria-live="polite"></p>
+ </main>
+ <div id="confetti" aria-hidden="true"></div>
+ <dialog id="note" class="envelope-gallery-dialog" aria-labelledby="personalLetterTitle">
+  <button id="closeNote" class="close-letter-gallery" type="button" aria-label="Close birthday letter">&times;</button>
+  <div class="letter-unsealing" aria-hidden="true"><div class="stationery-envelope">
+   <div class="stationery-back"></div>
+   <div class="stationery-letter"><span>hey there,</span><p>happieeee birthday sweetie.!</p><i></i><i></i><i></i></div>
+   <img class="stationery-pocket" src="assets/ivory-envelope-pocket.svg" alt="">
+   <div class="stationery-flap"><img class="stationery-flap-front" src="assets/ivory-envelope-flap.svg" alt=""><img class="stationery-flap-back" src="assets/ivory-envelope-flap.svg" alt=""></div>
+   <img class="stationery-seal" src="assets/gift-heart-seal.png" alt="">
+  </div></div>
+  <div class="personal-letter-composition">
+   <figure class="personal-letter-photo"><img src="assets/scrapbook/WhatsApp%20Image%202026-11-09%20at%204.36.45%20PM%20(1).jpeg" alt="A favourite memory of two friends sharing a hug"></figure>
+   <article class="personal-letter-paper vintage-love-letter">
+    <span class="personal-letter-rule" aria-hidden="true"></span>
+    <h2 id="personalLetterTitle">hey there,</h2>
+    <p class="letter-birthday-greeting">happieeee birthday sweetie.!</p>
+    <p>the sweetest person i know, the one who actually loves me and i love you the same. may be not the same but more than that, which i don&#8217;t know how to show.!</p>
+    <p>no matter what in life, i&#8217;ll make sure you are in it.</p>
+    <p class="personal-letter-signature">~love you the most<br>and the most.</p>
+   </article>
+  </div>
+ </dialog>
+ <dialog class="camera-dialog" id="cameraDialog" aria-label="Your instant camera and film strip">
+  <button class="close-camera" id="closeCamera" aria-label="Close camera">&times;</button>
+  <div class="instant-camera" id="instantCamera">
+   <div class="camera-trinkets" aria-hidden="true">
+    <img class="camera-butterfly" src="assets/vintage-butterfly.png" alt="" style="left:3%;top:9%;width:13%;rotate:-28deg">
+    <img class="camera-butterfly" src="assets/vintage-butterfly.png" alt="" style="left:81%;top:12%;width:12%;rotate:24deg">
+    <img class="camera-butterfly" src="assets/vintage-butterfly.png" alt="" style="left:5%;top:25%;width:17%;rotate:-18deg">
+    <img class="camera-butterfly" src="assets/vintage-butterfly.png" alt="" style="left:79%;top:30%;width:15%;rotate:32deg">
+    <img class="camera-butterfly" src="assets/vintage-butterfly.png" alt="" style="left:2%;top:44%;width:13%;rotate:16deg">
+    <img class="camera-butterfly" src="assets/vintage-butterfly.png" alt="" style="left:83%;top:47%;width:12%;rotate:-25deg">
+    <img class="camera-butterfly" src="assets/vintage-butterfly.png" alt="" style="left:6%;top:61%;width:16%;rotate:-34deg">
+    <img class="camera-butterfly" src="assets/vintage-butterfly.png" alt="" style="left:78%;top:65%;width:18%;rotate:18deg">
+    <img class="camera-butterfly" src="assets/vintage-butterfly.png" alt="" style="left:2%;top:80%;width:14%;rotate:28deg">
+    <img class="camera-butterfly" src="assets/vintage-butterfly.png" alt="" style="left:82%;top:84%;width:13%;rotate:-20deg">
+    <img class="camera-butterfly" src="assets/vintage-butterfly.png" alt="" style="left:13%;top:91%;width:10%;rotate:-12deg">
+   </div>
+   <div class="print-window" tabindex="0" role="region" aria-label="Your slowly moving photo memories"><div class="film-paper"></div></div>
+   <p class="camera-scroll-note">a little reel of us <span>memories, slowly unfolding</span></p>
+   <div class="popup-camera"><img src="assets/cam.png" alt="Polaroid camera printing your film strip"></div>
+  </div>
+ </dialog>
+ <audio id="birthdayMusic" src="assets/birthday-music-box.wav" preload="none" loop></audio>
+ <script src="vinyl.js?v=3" defer></script>
+</body>
+</html>

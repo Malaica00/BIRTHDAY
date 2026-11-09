@@ -1,0 +1,36 @@
+﻿/* The cake is a full cutout rather than a clipped section of a tall photograph. */
+.cake-scene .cake-position{bottom:24%;left:4%;right:4%;width:92%;z-index:1}
+.cake-scene .cake-art{aspect-ratio:1;overflow:visible}
+.cake-scene .cake-art img{position:static;width:100%;height:100%;object-fit:contain;clip-path:none;filter:drop-shadow(0 18px 16px #1d040d60)}
+.cake-scene .cake-art:before{content:'';position:absolute;left:14%;right:14%;bottom:7%;height:8%;border-radius:50%;background:#d9ad5b18;filter:blur(18px);z-index:-1}
+.wish-heading{position:absolute;top:20%;left:10%;right:10%;text-align:center;margin:0;font:400 9cqw/1.1 Georgia,serif;letter-spacing:-.04em;color:#f1e5ce}.wish-heading span{display:block;margin-top:12px;color:#cfad68;font:italic 4cqw/1.4 Georgia,serif;letter-spacing:0}
+.cake-scene .birthday-heading{top:19%;text-align:center;z-index:3}.cake-scene .birthday-heading>span{font-size:11cqw}.cake-scene .birthday-heading em{font-size:5cqw;margin-top:10px}
+.candle-flame{position:absolute;left:var(--left);top:var(--top);width:3%;height:7%;border-radius:70% 40% 55% 50%;background:radial-gradient(ellipse at 50% 75%,#fffbe4 0 20%,#ffe3a1 35%,#f9b43b 65%,#dc731800 80%);transform-origin:50% 100%;transform:translate(-50%,-100%);filter:drop-shadow(0 0 7px #ffb44e);animation:candle-flicker 1.1s ease-in-out infinite alternate;pointer-events:none}.candle-flame:nth-of-type(2){animation-delay:-.6s}.candles-out .candle-flame{animation:flame-farewell .55s ease-in var(--out-delay) forwards}
+.cake-scene .cake-instructions{bottom:13%;z-index:4}.cake-scene .next-gift{bottom:14%;z-index:4}.cake-instructions .fallback{display:block;margin:7px auto 0;color:#ddc491;opacity:1}.cake-instructions p{margin-bottom:12px}.cake-instructions .breath-meter{background:#d5b56d30}.cake-instructions .breath-meter span{background:#d5b56d}
+@keyframes candle-flicker{0%{transform:translate(-50%,-100%) rotate(-4deg) scale(.95,1)}100%{transform:translate(-50%,-100%) rotate(4deg) scale(1.05,.9)}}@keyframes flame-out{to{opacity:0;transform:translate(-50%,-130%) scale(.2)}}
+@media(max-height:720px){.cake-scene .cake-position{width:78%;left:11%;right:11%;bottom:24%}.wish-heading{top:19%;font-size:8cqw}.cake-scene .birthday-heading{top:18%}.cake-scene .birthday-heading>span{font-size:10cqw}}
+@media(prefers-reduced-motion:reduce){.candle-flame{animation:none}.candles-out .candle-flame{display:none}}
+
+/* Lace stays at the edges so the cake, heading and controls remain clear. */
+.cake-lace-border{position:absolute;inset:0;z-index:0;pointer-events:none;background:#3e131b url('assets/birthday-lace.jpg') center/cover no-repeat;background-blend-mode:multiply;opacity:.65;-webkit-mask-image:radial-gradient(ellipse at center,transparent 44%,#000 84%);mask-image:radial-gradient(ellipse at center,transparent 44%,#000 84%)}
+.cake-scene.scene:before{display:none}
+.cake-scene .wish-heading{z-index:2}
+.cake-scene .journey{border-top-color:#d8b05c88}
+
+.cake-scene .cake-instructions p{margin-bottom:6px;line-height:1.3}
+.cake-scene .cake-instructions .fallback{margin:2px auto 0;padding:3px 0;line-height:1.3}
+
+/* A quiet beat of candlelight before the birthday reveal. */
+.wish-dimmer{position:fixed;inset:0;background:#10030a;opacity:0;z-index:20;pointer-events:none}
+.wish-in-progress .wish-dimmer{animation:wish-dim 1.4s ease-in-out both}
+.candle-smoke{position:absolute;left:var(--left);top:var(--top);width:4%;height:14%;opacity:0;pointer-events:none;transform:translate(-50%,-95%);transform-origin:50% 100%;filter:blur(1px)}
+.candle-smoke:before,.candle-smoke:after{content:'';position:absolute;inset:0;border-left:2px solid #e9dfcd88;border-radius:60% 20% 65% 30%;transform:rotate(-12deg)}
+.candle-smoke:after{inset:30% -20% 0 20%;border-left-color:#f6eadb55;transform:rotate(16deg)}
+.candles-out .candle-smoke{animation:smoke-drift 1.8s ease-out var(--smoke-delay) both}
+.cake-scene .wish-message{position:absolute;bottom:19.5%;left:7%;right:7%;z-index:4;margin:0;text-align:center;color:#ead6ae;font:italic 4.4cqw/1.4 Georgia,serif;animation:wish-reveal .8s ease-out both}
+.cake-scene.candles-out .next-gift{bottom:11.5%}
+@keyframes wish-dim{0%,100%{opacity:0}20%,65%{opacity:.48}}
+@keyframes flame-farewell{0%{opacity:1;transform:translate(-50%,-100%) rotate(0) scale(1)}20%{opacity:.75;transform:translate(-50%,-100%) rotate(15deg) scale(.7,1.2)}40%{opacity:1;transform:translate(-50%,-100%) rotate(-14deg) scale(1.1,.7)}65%{opacity:.5;transform:translate(-50%,-100%) rotate(20deg) scale(.5,.9)}100%{opacity:0;transform:translate(-35%,-110%) rotate(25deg) scale(.05)}}
+@keyframes smoke-drift{0%{opacity:0;transform:translate(-50%,-85%) scale(.4,.55)}18%{opacity:.65}65%{opacity:.3;transform:translate(-20%,-130%) rotate(9deg) scale(1.1,1.2)}100%{opacity:0;transform:translate(35%,-185%) rotate(19deg) scale(1.6,1.6)}}
+@keyframes wish-reveal{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.wish-dimmer,.candle-smoke{display:none}.cake-scene .wish-message{animation:none}.candles-out .candle-flame{display:none}}

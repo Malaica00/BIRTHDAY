@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+ <meta name="theme-color" content="#3e131b"><meta name="description" content="A birthday surprise, one little moment at a time.">
+ <title>A birthday puzzle for you</title>
+ <link rel="stylesheet" href="birthday.css?v=6"><script src="birthday-shared.js?v=9" defer></script><script src="puzzle.js?v=12" defer></script>
+ <link rel="stylesheet" href="theme.css?v=1">
+ <link rel="stylesheet" href="birthday-polish.css?v=2"><script src="birthday-polish.js?v=3" defer></script>
+ <link rel="stylesheet" href="keepsakes.css?v=1">
+ <link rel="stylesheet" href="puzzle.css?v=6">
+ <link rel="stylesheet" href="scratch-intro.css?v=5"><script src="scratch-intro.js?v=7" defer></script>
+ <link rel="stylesheet" href="birthday-background.css?v=9">
+</head>
+<body class="scratch-pending">
+ <section class="scratch-intro" id="scratchIntro" aria-labelledby="scratchTitle">
+  <div class="scratch-intro-content"><p class="scratch-eyebrow" hidden>Put the pieces together.</p><h1 id="scratchTitle">A memory, waiting for you.</h1>
+   <div class="scratch-card"><img class="scratch-card-art" src="assets/birthday-scratch-card.jpg" alt="A textured red birthday card with a cream postage stamp frame">
+    <div class="scratch-puzzle-slot" id="scratchPuzzleSlot"></div>
+    <canvas id="scratchCanvas" class="scratch-cover" role="img" aria-label="Scratch the birthday panel with your finger or mouse to uncover your surprise"></canvas>
+   </div>
+   <div class="scratch-puzzle-controls" id="scratchPuzzleControls" hidden></div><p class="scratch-instruction" id="scratchInstruction">Scratch the birthday message to reveal your puzzle.</p>
+  </div>
+ </section>
+ <main class="birthday-story" id="story">
+  <section class="scene puzzle-scene active" id="puzzleScene" aria-label="Solve the birthday puzzle">
+   <div class="puzzle-content"><h1>Start with<br>a memory.</h1><p>Put the pieces together to open your birthday surprise.</p><div class="puzzle-board" id="puzzle" role="group" aria-label="Photo puzzle. Select two pieces to swap them."></div><button type="button" id="shufflePuzzle" class="shuffle-puzzle">Shuffle pieces</button><p id="puzzleHint">tap two pieces to swap · or drag and move</p></div>
+  </section>
+  <p class="sr-only" id="announcement" role="status" aria-live="polite"></p>
+ </main>
+ <div id="confetti" aria-hidden="true"></div>
+</body>
+</html>

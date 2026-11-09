@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#faf8f4">
+  <title>AAFRHA - a birthday scrapbook</title>
+  <meta name="description" content="A little book of everyday memories. Swipe to turn the pages.">
+  <link rel="stylesheet" href="scrapbook.css">
+  <link rel="stylesheet" href="scrapbook-book.css">
+  <script src="memories.js?v=1" defer></script><script src="scrapbook.js?v=9" defer></script>
+ <link rel="stylesheet" href="theme.css?v=1">
+ <link rel="stylesheet" href="keepsakes.css?v=1">
+ <link rel="stylesheet" href="birthday-background.css?v=9">
+ <link rel="stylesheet" href="scrapbook-motion.css?v=3">
+ <link rel="stylesheet" href="scrapbook-vintage.css?v=5">
+</head>
+<body>
+  <header class="topbar"><a href="gift.html" aria-label="Back to your gift">&larr; <span>back to your gift</span></a></header>
+  <main>
+    <div class="book" id="book" aria-label="Scrapbook" tabindex="0"><div class="book-cover" aria-hidden="true"></div><div class="paper-stack" aria-hidden="true"></div><div class="book-spine" aria-hidden="true"></div><div id="pages"></div></div>
+    <div class="book-controls">
+    <nav class="navigation" aria-label="Book pages"><button id="previous" aria-label="Previous page">&larr;</button><div><span id="counter" aria-live="polite">01 / 08</span><div id="dots" class="dots"></div></div><button id="next" aria-label="Next page">&rarr;</button></nav>
+    <p class="hint">tap the cover to open</p>
+    </div>
+  </main>
+</body>
+</html>

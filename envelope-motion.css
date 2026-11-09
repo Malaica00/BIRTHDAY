@@ -1,0 +1,24 @@
+/* Consistent ivory stationery: a real hinge, a fixed pocket and a separate letter. */
+.stationery-envelope{position:relative;width:min(72%,320px);aspect-ratio:340/224;perspective:1200px;transform:rotate(-2deg);filter:drop-shadow(0 17px 15px #16070b55)}
+.stationery-envelope:after{content:'';position:absolute;left:10%;right:10%;bottom:-18%;height:10%;background:#17070b40;border-radius:50%;filter:blur(12px);z-index:-1}
+.stationery-back{position:absolute;inset:0;z-index:0;border:1px solid #c9b995;border-radius:2px;background:linear-gradient(160deg,#ccbc99,#e4d6b9 55%,#e9dcc0);box-shadow:inset 0 14px 18px #6e573323}
+.stationery-pocket{position:absolute;inset:0;width:100%;height:100%;z-index:3;filter:drop-shadow(0 -1px 1px #735f3520)}
+.stationery-flap{position:absolute;left:0;top:0;width:100%;height:66.964%;z-index:4;transform-origin:50% 0;transform-style:preserve-3d}
+.stationery-flap img{position:absolute;inset:0;width:100%;height:100%;backface-visibility:hidden}
+.stationery-flap-front{filter:drop-shadow(0 3px 2px #69533435)}
+.stationery-flap-back{transform:rotateY(180deg);filter:brightness(.97)}
+.stationery-seal{position:absolute;left:42%;top:55%;width:16%;height:auto;z-index:5;filter:drop-shadow(0 2px 2px #5c352a55)}
+.stationery-letter{position:absolute;z-index:2;left:7%;top:10%;width:86%;height:84%;box-sizing:border-box;padding:12% 10%;border:1px solid #e4dac7;border-radius:1px;background:linear-gradient(125deg,#fffaf0,#f8f0e0);box-shadow:0 2px 6px #4d382225;transform-origin:50% 90%}
+.stationery-letter>span{display:block;color:#744536;font:28px/1.1 'Letter Signature',cursive;text-align:left}
+.stationery-letter>p{margin:11px 0 15px;font:18px/1.2 'Letter Signature',cursive;color:#86594b;text-align:left}
+.stationery-letter i{display:block;height:1px;width:92%;margin-top:10px;background:#bea88a38}.stationery-letter i:last-child{width:61%}
+.is-open .stationery-seal{animation:stationery-unseal .5s ease .15s forwards}
+.is-open .stationery-flap{animation:stationery-hinge 1.2s cubic-bezier(.4,0,.2,1) .4s forwards}
+.is-open .stationery-letter{animation:stationery-extract 1.2s cubic-bezier(.28,.6,.25,1) 1.1s forwards}
+.is-open .letter-unsealing{animation:letter-introduction-out .65s ease 2.25s forwards}
+.is-open .personal-letter-composition{animation:personal-letter-in .85s ease 2.3s forwards}
+@keyframes stationery-unseal{to{opacity:0;transform:translateY(14px) rotate(-12deg) scale(.92)}}
+@keyframes stationery-hinge{0%{transform:rotateX(0);z-index:4}48%{z-index:4}52%{z-index:1}100%{transform:rotateX(178deg);z-index:1}}
+@keyframes stationery-extract{0%{transform:translateY(0)}65%{transform:translateY(-40%) rotate(.4deg)}100%{transform:translateY(-53%) rotate(.8deg)}}
+@media(max-width:640px){.stationery-envelope{width:76%}.stationery-letter>span{font-size:26px}.stationery-letter>p{font-size:16px}}
+@media(prefers-reduced-motion:reduce){.is-open .stationery-seal,.is-open .stationery-flap,.is-open .stationery-letter,.is-open .letter-unsealing,.is-open .personal-letter-composition{animation-duration:.01ms!important;animation-delay:0ms!important}}

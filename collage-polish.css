@@ -1,0 +1,2 @@
+/* Preserve the original collage geometry and render detailed artwork smoothly. */
+.collage-scene .sticker img{image-rendering:auto}

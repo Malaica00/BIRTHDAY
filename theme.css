@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap');
+
+/* Shared Maison Rouge inspired palette, typography, and finishes. */
+:root{color-scheme:dark;--red:#590709;--cream:#fff8e9;--paper:#f4ecdc;--purple:#590709;--ink:#39201e;--muted:#d1b7a9;--hairline:#f4ecdc38;--display:'Libre Caslon Display',Georgia,serif}
+body{background:radial-gradient(ellipse at 74% 18%,#7b252635,transparent 48%),radial-gradient(ellipse at 15% 75%,#a2886e18,transparent 45%),#240607;color:var(--cream);font-family:'DM Sans',Arial,sans-serif}
+button:focus-visible,a:focus-visible,label:focus-within{outline:2px solid #e5c6a0;outline-offset:5px}
+.birthday-story{background:var(--red);box-shadow:0 20px 100px #12000080}
+.scene,.collage-scene{background:radial-gradient(ellipse at 85% 10%,#7b171b80,transparent 62%),linear-gradient(155deg,#600b0e,#4b0305)}
+.scene:before{content:'';position:absolute;inset:20px;border:1px solid var(--hairline);pointer-events:none;z-index:0}
+.scene:after{content:'FOR YOU, WITH LOVE';position:absolute;top:38px;left:0;right:0;text-align:center;font:400 8px/1.5 'DM Sans',Arial,sans-serif;letter-spacing:.24em;color:var(--muted);pointer-events:none}
+.puzzle-content{top:24%;left:13%;width:74%}
+.puzzle-content h1{font:400 clamp(35px,10cqw,48px)/1.05 var(--display);letter-spacing:-.025em;margin:0 0 16px}
+.puzzle-content p{color:var(--muted);font-size:clamp(10px,2.5cqw,12px);line-height:1.7;margin-bottom:24px}
+.puzzle-content p:last-child{font-size:clamp(9px,2.2cqw,11px);margin-top:22px}
+.puzzle-board{border:1px solid #d9bda180;padding:5px;gap:3px;background:#310405;box-shadow:0 18px 45px #20000045}
+.puzzle-piece.selected{outline-color:#f4dfb9}
+.puzzle-board.solved{box-shadow:0 0 35px #e7c79e50}
+.gift-scene h2{top:14%;font:400 17cqw/.93 var(--display);letter-spacing:-.035em;text-transform:none}
+.present img{filter:drop-shadow(0 18px 18px #24000066)}
+.unwrap-copy{bottom:15%;width:auto;max-width:65%;padding:13px 25px;border:1px solid #f4ecdc70;border-radius:30px;font:400 10px/1.4 'DM Sans',Arial,sans-serif;letter-spacing:.06em;transition:background .2s,color .2s}
+.unwrap-copy:hover{background:var(--cream);color:var(--red)}
+.birthday-heading{top:15%;left:10%;right:10%}
+.birthday-heading>span{font:400 clamp(40px,17cqw,78px)/.91 var(--display);letter-spacing:-.035em}
+.birthday-heading em{font:italic 400 clamp(28px,11cqw,51px)/1.2 var(--display);padding-top:9px}
+.cake-instructions p{color:var(--muted);font-size:11px}
+.text-button{font-size:11px;text-decoration:none;border:1px solid var(--hairline);border-radius:30px;padding:9px 18px;transition:background .2s}
+.text-button:hover{background:#ffffff10}
+.fallback{border:0;padding:8px 12px;margin-top:3px;font-size:10px}
+.next-gift{left:15%;width:70%;bottom:6%}
+.cake-instructions{bottom:5.5%}
+.collage-scene:after{display:none}
+dialog{background:var(--paper);color:var(--red);border:1px solid #d7b994;padding:55px 32px 35px;font:400 25px/1.4 var(--display);rotate:0deg;box-shadow:0 25px 100px #18000080}
+dialog em{font:italic 19px var(--display)}
+dialog::backdrop{background:#200204d9;backdrop-filter:blur(8px)}
+.camera-dialog{background:radial-gradient(ellipse at top,#771c21,#360305);border:1px solid var(--hairline)}
+.camera-dialog::backdrop{background:#200204eb}
+/* The memory book retains its paper pages and working page turns. */
+body:has(.book){background:radial-gradient(ellipse at 50% 30%,#78161b 0%,#590709 55%,#2e0205 100%)}
+.topbar{color:var(--cream);padding:25px 32px;border-bottom:1px solid var(--hairline);margin:0 24px}
+.upload{border-color:var(--hairline);font-size:10px;letter-spacing:.04em}
+.eyebrow{color:var(--muted);opacity:1;font-size:9px;letter-spacing:.2em;margin-top:12px}
+.navigation button{color:var(--cream);border-color:var(--hairline)}
+.dots button.active{background:var(--cream)}
+.hint,.upload-status{color:var(--muted)}
+.book-cover{background:#57090e;box-shadow:inset 0 1px 1px #c6a27a,inset -1px -2px 2px #260103,1px 3px 3px #20000066}
+.page h1,.page h2{font-family:var(--display);font-weight:400}
+.book{filter:drop-shadow(0 26px 24px #20000066)}
+@media(min-width:600px){body:has(.birthday-story){display:grid;min-height:100svh;place-items:center;padding:24px}.birthday-story{height:min(calc(100svh - 48px),940px);min-height:540px;border:1px solid #c4937430}}
+@media(max-height:650px){.scene:after{top:29px}.puzzle-content{top:18%}.puzzle-content h1{font-size:9cqw;margin-bottom:10px}.puzzle-content p{margin-bottom:14px}.puzzle-content p:last-child{margin-top:14px}}
+@media(max-width:480px){.topbar{margin:0 16px;padding:20px 4px}.scene:before{inset:14px}}

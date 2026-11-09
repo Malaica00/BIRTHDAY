@@ -1,0 +1,609 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+:root{--paper:#faf7f0;--ink:#302d29;--red:#c7392d;--muted:#89837a}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif}body:before{content:'';position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%239b8b72' opacity='.2' filter='url(%23n)' d='M0 0h180v180H0z'/%3E%3C/svg%3E")}.page-frame{max-width:1600px;min-height:100svh;margin:auto;padding:0 5vw;display:flex;flex-direction:column}header{height:100px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ddd7cc}.wordmark{color:var(--ink);font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:24px;text-decoration:none;letter-spacing:-1px}.wordmark span{color:var(--red);font:12px sans-serif;vertical-align:top;margin:3px}.header-note,footer,.eyebrow{font-size:10px;letter-spacing:2px;font-weight:600}.tiny-heart{color:var(--red);margin-left:14px}main{flex:1;position:relative;text-align:center;padding-top:42px}.eyebrow{color:var(--red);margin:0 0 16px}h1{font:500 clamp(36px,4.3vw,62px)/1.08 'Playfair Display',Georgia,serif;letter-spacing:-2px;margin:0}.red{color:var(--red)}.subtext{color:var(--muted);font-size:13px;margin-top:18px}.stage{height:350px;max-width:850px;margin:0 auto;position:relative}.orbit{position:absolute;border:1px solid #e6e0d4;border-radius:50%;width:520px;height:230px;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-15deg);pointer-events:none}.orbit-two{width:390px;height:300px;transform:translate(-50%,-50%) rotate(25deg);opacity:.5}.gift-wrap{position:absolute;inset:0;animation:drop 1.3s cubic-bezier(.22,.75,.32,1) both}.gift{position:absolute;width:260px;left:50%;top:32px;transform:translateX(-50%);border:0;background:none;cursor:pointer;padding:0;z-index:2;transition:transform .3s}.gift img{width:100%;mix-blend-mode:multiply;display:block}.gift:hover{transform:translateX(-50%) rotate(-7deg) scale(1.05)}.gift:focus-visible,.replay:focus-visible{outline:2px dashed var(--red);outline-offset:8px}.gift-label{position:absolute;left:calc(50% - 235px);top:70px;font:italic 19px/1.3 'Playfair Display',Georgia,serif;color:#807667;transform:rotate(-12deg)}.gift-shadow{position:absolute;width:160px;height:18px;left:50%;top:265px;transform:translateX(-50%);background:#6b533325;filter:blur(12px);border-radius:50%}.click-note{position:absolute;top:280px;left:0;right:0;font-size:12px;color:var(--red);letter-spacing:1px}.click-note span{display:inline-block;margin-left:10px;font-size:26px;vertical-align:middle}.doodle{position:absolute;color:#b39e69;font-size:44px}.s-one{left:14%;top:220px;transform:rotate(15deg)}.s-two{right:18%;top:56px;font-size:32px}.s-three{right:8%;bottom:37px;font-size:22px;color:var(--red)}.before-note{font:italic 18px 'Playfair Display',Georgia,serif;color:var(--muted);margin:9px 0 35px}footer{display:flex;justify-content:space-between;border-top:1px solid #ddd7cc;padding:24px 0;color:#948a7c;font-size:9px;letter-spacing:1.5px}.collage{position:absolute;inset:0;visibility:hidden;pointer-events:none}.piece{position:absolute;object-fit:contain;mix-blend-mode:multiply;filter:drop-shadow(2px 5px 2px #48392313)}.birthday{width:50%;left:25%;top:0;--angle:-4deg;z-index:3}.disco{width:17%;left:3%;top:1%;--angle:-14deg}.love{width:14%;right:4%;top:10%;--angle:13deg}.camera{width:27%;left:3%;bottom:4%;--angle:-16deg}.cake{width:30%;left:36%;bottom:-1%;--angle:2deg;z-index:4}.cat{width:23%;right:5%;bottom:-3%;--angle:13deg}.party-star,.party-heart{position:absolute;color:#b59d46;font-size:52px;left:23%;top:40%;transform:rotate(15deg)}.star-two{left:74%;top:47%;font-size:40px}.party-heart{left:29%;top:72%;color:var(--red);font-size:25px;transform:rotate(-20deg)}.after{display:none;padding:34px 0 30px}.after h2{font:500 32px 'Playfair Display',Georgia,serif;letter-spacing:-1px;margin:10px 0}.after p:not(.eyebrow){color:var(--muted);font-size:13px}.replay{background:none;border:0;border-bottom:1px solid #c7392d55;padding:10px 0;color:var(--red);font:500 12px 'DM Sans',sans-serif;cursor:pointer;margin-top:6px}.replay span{font-size:18px;margin-left:12px}.opened .intro{display:none}.opened main{padding-top:35px}.opened .stage{height:clamp(320px,39vw,440px)}.opened .gift-wrap{pointer-events:none;animation:unwrap .45s ease forwards}.opened .collage{visibility:visible}.opened .piece{animation:pop .9s cubic-bezier(.18,.8,.28,1.16) both;animation-delay:calc(var(--i,0)*70ms + 150ms)}.opened .after{display:block;animation:fade .7s .6s both}.opened .before-note{display:none}.opened .orbit{opacity:.45}.opened .doodle{display:none}.confetto{position:fixed;left:50%;top:46%;width:8px;height:13px;background:var(--c);animation:confetti 1.9s ease-out forwards;z-index:10;pointer-events:none}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}@keyframes drop{0%{transform:translateY(-650px) rotate(-20deg);opacity:0}60%{transform:translateY(15px) rotate(5deg);opacity:1}80%{transform:translateY(-12px) rotate(-3deg)}100%{transform:translateY(0) rotate(0)}}@keyframes unwrap{to{opacity:0;transform:scale(.35) rotate(12deg)}}@keyframes pop{from{opacity:0;transform:translate(var(--from-x,0),var(--from-y,100px)) scale(.05) rotate(0)}to{opacity:1;transform:translate(0,0) scale(1) rotate(var(--angle))}}@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}@keyframes confetti{0%{transform:translate(0,0) rotate(0);opacity:1}100%{transform:translate(var(--x),var(--y)) rotate(var(--r));opacity:0}}@media(min-width:1100px) and (min-height:850px){main{padding-top:65px}.stage{height:390px}.gift{top:55px}.gift-label{top:95px}.click-note{top:310px}.gift-shadow{top:290px}.opened main{padding-top:65px}}@media(max-width:600px){.page-frame{padding:0 6vw}header{height:76px}.wordmark{font-size:20px}.header-note{font-size:8px;letter-spacing:1px;max-width:106px;line-height:1.6;text-align:right}.tiny-heart{margin-left:0}main{padding-top:48px}h1{font-size:42px}.stage{height:345px;margin-top:12px}.orbit{width:95%;height:190px}.orbit-two{width:75%;height:270px}.gift{width:235px;top:45px}.gift-label{left:0;top:25px;font-size:15px;z-index:3}.s-one{left:1%;top:230px}.s-two{right:2%}.click-note{top:284px}.before-note{font-size:16px}.opened main{padding-top:55px}.opened .stage{height:350px}.birthday{width:70%;left:15%;top:50px}.disco{width:25%;left:-2%;top:-10px}.love{width:20%;right:-1%;top:0}.camera{width:36%;left:-1%;bottom:40px}.cake{width:42%;left:27%;bottom:0}.cat{width:31%;right:-2%;bottom:32px}.party-star{left:8%;top:42%;font-size:35px}.star-two{left:81%;top:46%}.party-heart{left:12%;top:88%}.after{padding:35px 0}.after h2{font-size:28px}.after .eyebrow{font-size:8px;letter-spacing:1.4px}.after p:not(.eyebrow){max-width:280px;margin:14px auto;line-height:1.8}footer{font-size:7px;letter-spacing:1px;gap:20px;line-height:1.5}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-delay:0ms!important;transition:none!important}.confetto{display:none}}
+
+/* A larger present, with a true transparent cutout. */
+body:not(.opened) .stage{height:450px;max-width:1000px}
+.gift{width:440px;top:12px}
+.gift img{mix-blend-mode:normal;filter:drop-shadow(0 18px 14px #49351c18)}
+.gift-label{left:calc(50% - 310px);top:130px}
+.gift-shadow{top:365px;width:230px}
+.click-note{top:392px}
+body:not(.opened) .orbit-one{width:680px;height:310px}
+body:not(.opened) .orbit-two{width:520px;height:380px}
+@media(max-width:600px){
+ body:not(.opened) .stage{height:390px}
+ .gift{width:min(390px,95vw);top:18px}
+ .gift-label{left:0;top:0;font-size:15px}
+ .gift-shadow{top:310px;width:180px}
+ .click-note{top:338px}
+ body:not(.opened) .orbit-one{width:100%;height:250px}
+ body:not(.opened) .orbit-two{width:85%;height:330px}
+}
+
+/* Larger type and artwork throughout both scenes. */
+.wordmark{font-size:30px}
+.header-note{font-size:12px}
+.eyebrow{font-size:13px;letter-spacing:2.5px}
+h1{font-size:clamp(48px,5.6vw,82px)}
+.subtext{font-size:17px}
+body:not(.opened) .stage{height:540px;max-width:1200px}
+.gift{width:540px;top:5px}
+.gift-label{left:calc(50% - 385px);top:155px;font-size:25px}
+.gift-shadow{top:440px;width:280px}
+.click-note{top:474px;font-size:16px}
+body:not(.opened) .orbit-one{width:830px;height:380px}
+body:not(.opened) .orbit-two{width:630px;height:460px}
+.before-note{font-size:23px;margin-bottom:44px}
+.doodle{font-size:55px}
+.s-two{font-size:44px}
+.s-three{font-size:32px}
+.opened .stage{max-width:1180px;width:100%;height:clamp(500px,46vw,630px)}
+.opened main{padding-top:45px}
+.after{padding:45px 0 42px}
+.after h2{font-size:clamp(34px,3.7vw,50px)}
+.after p:not(.eyebrow){font-size:18px;line-height:1.65}
+.replay{font-size:16px;padding:14px 0}
+.replay span{font-size:25px}
+.party-star{font-size:70px}
+.star-two{font-size:58px}
+.party-heart{font-size:38px}
+footer{font-size:11px;padding:28px 0}
+@media(max-width:600px){
+ header{height:88px}
+ .wordmark{font-size:24px}
+ .header-note{font-size:9px;max-width:120px}
+ main{padding-top:38px}
+ h1{font-size:clamp(43px,11.5vw,66px);letter-spacing:-1.8px}
+ .eyebrow{font-size:11px;letter-spacing:1.6px}
+ .subtext{font-size:16px;line-height:1.5}
+ body:not(.opened) .stage{height:450px}
+ .gift{width:min(460px,108vw);top:28px}
+ .gift-label{left:0;top:0;font-size:19px}
+ .gift-shadow{top:350px;width:210px}
+ .click-note{top:395px;font-size:15px}
+ body:not(.opened) .orbit-one{width:108%;height:280px;max-width:95vw}
+ body:not(.opened) .orbit-two{width:95%;height:370px}
+ .before-note{font-size:21px}
+ .opened main{padding-top:38px}
+ .opened .stage{height:clamp(430px,114vw,650px);width:100%;max-width:none}
+ .birthday{width:88%;left:6%;top:72px}
+ .disco{width:30%;left:-2%;top:0}
+ .love{width:24%;right:-1%;top:0}
+ .camera{width:43%;left:-1%;bottom:62px}
+ .cake{width:51%;left:24%;bottom:0}
+ .cat{width:38%;right:-2%;bottom:60px}
+ .party-star{font-size:43px;left:4%;top:46%}
+ .star-two{left:85%;top:43%;font-size:38px}
+ .party-heart{font-size:33px;left:10%;top:88%}
+ .after{padding:38px 0}
+ .after .eyebrow{font-size:10px;letter-spacing:1.2px;line-height:1.7}
+ .after h2{font-size:36px;line-height:1.15}
+ .after p:not(.eyebrow){font-size:17px;max-width:340px}
+ .replay{font-size:16px}
+ footer{font-size:9px;gap:20px}
+}
+
+/* Oversized birthday scenes and a spinning gift entrance. */
+h1{font-size:clamp(60px,7vw,104px)}
+.subtext{font-size:21px}
+.eyebrow{font-size:15px}
+body:not(.opened) .stage{height:660px;max-width:1400px}
+.gift-wrap{animation:gift-spin-pop 1.65s cubic-bezier(.2,.7,.25,1) both;transform-origin:50% 46%}
+.gift{width:680px;top:0}
+.gift-label{left:calc(50% - 470px);top:210px;font-size:30px}
+.gift-shadow{top:548px;width:330px}
+.click-note{top:585px;font-size:19px}
+body:not(.opened) .orbit-one{width:1000px;height:460px}
+body:not(.opened) .orbit-two{width:790px;height:570px}
+.before-note{font-size:28px}
+.opened .stage{max-width:1400px;height:clamp(640px,55vw,780px)}
+.after h2{font-size:clamp(44px,4.8vw,68px)}
+.after p:not(.eyebrow){font-size:23px}
+.replay{font-size:20px}
+.replay span{font-size:30px}
+.party-star{font-size:88px}
+.star-two{font-size:72px}
+.party-heart{font-size:46px}
+@keyframes gift-spin-pop{
+ 0%{opacity:0;transform:translateY(-220px) rotate(-300deg) scale(.08)}
+ 52%{opacity:1;transform:translateY(10px) rotate(18deg) scale(1.12)}
+ 72%{transform:translateY(-14px) rotate(-9deg) scale(.96)}
+ 88%{transform:translateY(4px) rotate(4deg) scale(1.03)}
+ 100%{opacity:1;transform:translateY(0) rotate(0) scale(1)}
+}
+@media(max-width:600px){
+ h1{font-size:clamp(52px,13vw,78px)}
+ .subtext{font-size:19px}
+ .eyebrow{font-size:13px}
+ body:not(.opened) .stage{height:500px}
+ .gift{width:min(550px,120vw);top:35px}
+ .gift-label{left:0;top:0;font-size:22px}
+ .gift-shadow{top:390px;width:230px}
+ .click-note{top:440px;font-size:18px}
+ body:not(.opened) .orbit-one{width:108%;height:310px}
+ body:not(.opened) .orbit-two{width:100%;height:410px}
+ .before-note{font-size:25px}
+ .opened .stage{height:clamp(480px,128vw,730px)}
+ .birthday{width:96%;left:2%;top:90px}
+ .disco{width:34%;left:-2%;top:0}
+ .love{width:28%;right:-1%;top:0}
+ .camera{width:47%;left:-2%;bottom:80px}
+ .cake{width:59%;left:19%;bottom:0}
+ .cat{width:43%;right:-2%;bottom:74px}
+ .after h2{font-size:43px}
+ .after .eyebrow{font-size:12px}
+ .after p:not(.eyebrow){font-size:20px}
+ .replay{font-size:19px}
+ .party-star{font-size:48px}
+ .star-two{font-size:43px}
+ .party-heart{font-size:37px}
+}
+
+/* One-screen, mobile-first composition for both states. */
+html,body{height:100%;overflow:hidden}
+.page-frame{width:100%;max-width:560px;height:100svh;min-height:0;padding:0 22px;overflow:hidden}
+header{height:66px;flex:0 0 66px;gap:16px}
+.wordmark{font-size:23px;white-space:nowrap}
+.header-note{font-size:8px;letter-spacing:1px;max-width:120px;line-height:1.5;text-align:right}
+main,.opened main{padding:22px 0 0;min-height:0;display:flex;flex-direction:column}
+.intro{flex:0 0 auto}
+.eyebrow{font-size:10px;letter-spacing:1.7px;margin:0 0 12px}
+h1{font-size:clamp(35px,9.5vw,52px);line-height:1.07;letter-spacing:-1.6px}
+.subtext{font-size:13px;line-height:1.5;margin:12px 0 0}
+.stage,body:not(.opened) .stage,.opened .stage{width:100%;max-width:none;height:auto;flex:1 1 0;min-height:0;margin:12px auto 0;container-type:size}
+.gift{width:min(108cqw,95cqh);top:50%;transform:translate(-50%,-50%)}
+.gift:hover{transform:translate(-50%,-50%) rotate(-7deg) scale(1.04)}
+.gift-wrap{transform-origin:50% 50%}
+.gift-label{left:0;top:6%;font-size:17px;z-index:3}
+.gift-shadow{top:79%;width:45%;height:12px}
+.click-note{top:auto;bottom:0;margin:0;font-size:12px;line-height:1.8}
+.click-note span{font-size:22px}
+body:not(.opened) .orbit-one,.orbit-one{width:98%;max-width:none;height:63%;top:50%}
+body:not(.opened) .orbit-two,.orbit-two{width:80%;height:80%;top:50%}
+.doodle{font-size:34px}.s-one{left:0;top:64%}.s-two{right:0;top:13%;font-size:28px}.s-three{right:0;bottom:14%;font-size:22px}
+.before-note{flex:0 0 auto;font-size:16px;margin:20px 0 24px}
+.opened main{padding-top:16px}
+.opened .stage{margin-top:0}
+.collage{inset:3% 0}
+.birthday{width:86%;height:38%;left:7%;top:16%;object-fit:contain}
+.disco{width:28%;height:30%;left:0;top:0;object-fit:contain}
+.love{width:24%;height:34%;right:0;top:0;object-fit:contain}
+.camera{width:42%;height:38%;left:0;bottom:7%;object-fit:contain}
+.cake{width:51%;height:43%;left:23%;bottom:0;object-fit:contain}
+.cat{width:34%;height:49%;right:0;bottom:4%;object-fit:contain}
+.party-star{left:7%;top:43%;font-size:36px}.star-two{left:85%;top:43%;font-size:31px}.party-heart{left:12%;top:86%;font-size:27px}
+.after{flex:0 0 auto;padding:15px 0 20px}
+.after .eyebrow{font-size:9px;letter-spacing:1.3px;line-height:1.4;margin-bottom:10px}
+.after h2{font-size:clamp(25px,7vw,36px);line-height:1.12;letter-spacing:-1px;margin:0 auto;max-width:390px}
+.after p:not(.eyebrow){font-size:13px;line-height:1.6;max-width:310px;margin:10px auto}
+.replay{font-size:13px;padding:8px 0;margin-top:0;min-height:42px}.replay span{font-size:21px}
+@media(min-width:700px){
+ .page-frame{max-width:1100px;padding:0 40px}
+ header{height:78px;flex-basis:78px}.wordmark{font-size:28px}.header-note{max-width:none;font-size:10px}
+ h1{font-size:clamp(40px,6vh,70px)}
+ .gift{width:min(68cqw,105cqh)}
+ .gift-label{left:12%;top:25%;font-size:23px}
+ .opened .stage{width:min(100%,115svh)}
+ .after h2{max-width:none;font-size:clamp(28px,4.5vh,48px)}
+ .after p:not(.eyebrow){max-width:none;font-size:16px}
+}
+@media(max-height:650px){
+ header{height:50px;flex-basis:50px}
+ main,.opened main{padding-top:12px}
+ h1{font-size:clamp(29px,6.6svh,43px)}
+ .eyebrow{margin-bottom:6px;font-size:9px}
+ .subtext{margin-top:8px;font-size:12px}
+ .gift-label{font-size:14px}
+ .before-note{font-size:14px;margin:12px 0 14px}
+ .after{padding:8px 0 10px}
+ .after .eyebrow{margin-bottom:6px;font-size:8px}
+ .after h2{font-size:25px}
+ .after p:not(.eyebrow){margin:6px auto;font-size:12px}
+ .replay{font-size:12px;padding:5px 0;min-height:34px}
+}
+
+/* The present arrives first; its surrounding copy follows. */
+.gift-wrap{animation:none}
+.gift{animation:box-first 1.65s cubic-bezier(.2,.7,.25,1) both;transform-origin:center}
+body:not(.opened) .intro{animation:copy-pop .65s 1.65s both}
+body:not(.opened) .gift-label{animation:label-pop .6s 1.85s both}
+body:not(.opened) .click-note{animation:copy-pop .6s 2.05s both}
+body:not(.opened) .before-note{animation:copy-pop .6s 2.2s both}
+body:not(.opened) .gift-shadow{animation:shadow-in .6s 1.15s both}
+@keyframes box-first{
+ 0%{opacity:0;transform:translate(-50%,-50%) rotate(-300deg) scale(.08)}
+ 52%{opacity:1;transform:translate(-50%,-50%) rotate(18deg) scale(1.12)}
+ 72%{transform:translate(-50%,-50%) rotate(-9deg) scale(.96)}
+ 88%{transform:translate(-50%,-50%) rotate(4deg) scale(1.03)}
+ 100%{opacity:1;transform:translate(-50%,-50%) rotate(0) scale(1)}
+}
+@keyframes copy-pop{
+ from{opacity:0;transform:translateY(12px) scale(.92)}
+ to{opacity:1;transform:translateY(0) scale(1)}
+}
+@keyframes label-pop{
+ from{opacity:0;transform:translateY(12px) rotate(-12deg) scale(.85)}
+ to{opacity:1;transform:translateY(0) rotate(-12deg) scale(1)}
+}
+@keyframes shadow-in{from{opacity:0}to{opacity:1}}
+
+/* Separate lid and body so the present actually opens before the reveal. */
+.box-parts{display:block;position:relative;width:100%;isolation:isolate}
+.gift .box-base{clip-path:polygon(0 48%,100% 48%,100% 100%,0 100%);filter:none}
+.gift .box-lid{position:absolute;inset:0;clip-path:polygon(0 0,100% 0,100% 48%,0 48%);filter:none;transform-origin:70% 46%}
+.opening .gift{animation:none;transform:translate(-50%,-50%);pointer-events:none}
+.opening .box-lid{animation:lift-lid 1s cubic-bezier(.2,.7,.25,1) forwards}
+.opening .box-base{animation:box-react 1s ease forwards}
+.opening .gift-label,.opening .click-note{visibility:hidden}
+.opened .gift-wrap{visibility:hidden;animation:none;pointer-events:none}
+.opened .orbit{opacity:.2}
+@keyframes lift-lid{
+ 0%{transform:translateY(0) rotate(0);opacity:1}
+ 20%{transform:translateY(-5%) rotate(-5deg)}
+ 65%{transform:translate(9%,-38%) rotate(22deg);opacity:1}
+ 100%{transform:translate(18%,-65%) rotate(32deg);opacity:0}
+}
+@keyframes box-react{
+ 0%,25%{transform:scale(1);opacity:1}
+ 45%{transform:translateY(3%) scale(1.04,.96);opacity:1}
+ 70%{transform:translateY(0) scale(1);opacity:1}
+ 100%{transform:translateY(8%) scale(.85);opacity:0}
+}
+/* A balanced collage: headline above, camera and cat beside the cake. */
+.collage{inset:0;container-type:size}
+.birthday{width:68%;height:30%;left:16%;top:12%;--angle:-3deg;z-index:5}
+.disco{width:24%;height:24%;left:0;top:0;--angle:-10deg}
+.love{width:20%;height:33%;right:0;top:1%;--angle:10deg}
+.camera{width:36%;height:32%;left:0;bottom:17%;--angle:-12deg;z-index:2}
+.cake{width:49%;height:39%;left:25%;bottom:0;--angle:0deg;z-index:4}
+.cat{width:31%;height:43%;right:0;bottom:12%;--angle:10deg;z-index:3}
+.party-star{left:3%;top:37%;font-size:32px}
+.star-two{left:87%;top:41%;font-size:30px}
+.party-heart{left:10%;top:88%;font-size:27px}
+.opened .piece{animation:burst-out .85s cubic-bezier(.16,.75,.25,1.08) both;animation-delay:calc(var(--i,0)*85ms)}
+@keyframes burst-out{
+ from{opacity:0;translate:calc(50cqw - var(--center-x)) calc(58cqh - var(--center-y));scale:.08;rotate:-16deg}
+ to{opacity:1;translate:0 0;scale:1;rotate:0deg;transform:rotate(var(--angle))}
+}
+.birthday{--center-x:50cqw;--center-y:27cqh}
+.disco{--center-x:12cqw;--center-y:12cqh}
+.love{--center-x:90cqw;--center-y:17.5cqh}
+.camera{--center-x:18cqw;--center-y:67cqh}
+.cake{--center-x:49.5cqw;--center-y:80.5cqh}
+.cat{--center-x:84.5cqw;--center-y:66.5cqh}
+@media(prefers-reduced-motion:reduce){.opening .box-lid,.opening .box-base{animation-duration:.01ms!important}}
+
+/* Use the supplied, matching full-canvas BOX and LID layers. */
+.gift .box-base{clip-path:polygon(0 33%,15.5% 39%,50.5% 54%,85% 39%,100% 33%,100% 100%,0 100%)}
+.gift .box-lid{clip-path:polygon(0 0,100% 0,100% 33%,85% 39%,50.5% 54%,15.5% 39%,0 33%);transform-origin:70% 46%}
+
+/* Overlap the lid seam and apply the maroon palette. */
+:root{--paper:#500d22;--ink:#fff2df;--red:#f4bc8b;--muted:#d6b7b4}
+body{background:var(--paper);color:var(--ink)}
+.gift .box-base{clip-path:polygon(0 31%,15.5% 37%,50.5% 52%,85% 37%,100% 31%,100% 100%,0 100%)}
+.gift .box-lid{top:2.5%;bottom:auto}
+header{border-bottom-color:#ffffff26}
+.header-note{color:#e3c3bd}
+.gift-label{color:#eed4bd}
+.orbit{border-color:#e4b69238}
+.doodle,.party-star{color:#e4bc76}
+.piece{mix-blend-mode:normal}
+.replay{border-bottom-color:#f4bc8b80}
+.gift-shadow{background:#15000980}
+.gift:focus-visible,.replay:focus-visible{outline-color:#ffe1ab}
+
+/* Close the remaining seam and remove the orbit decoration. */
+.gift .box-lid{top:4%;bottom:auto}
+.gift .box-base{clip-path:polygon(0 27%,15.5% 33%,50.5% 48%,85% 33%,100% 27%,100% 100%,0 100%)}
+.orbit{display:none}
+
+/* Big birthday headline, big cake, and touchable party stickers. */
+.birthday{width:88%;height:34%;left:6%;top:13%;--center-x:50cqw;--center-y:30cqh}
+.cake{width:62%;height:auto;aspect-ratio:426/355;left:19%;bottom:0;--center-x:50cqw;--center-y:79cqh}
+.camera{width:33%;height:29%;left:0;bottom:31%}
+.cat{width:29%;height:38%;right:0;bottom:27%}
+.collage{pointer-events:none}
+.sticker-button{padding:0;border:0;background:transparent;cursor:pointer;pointer-events:auto;color:inherit;-webkit-tap-highlight-color:transparent}
+.sticker-button img{display:block;width:100%;height:100%;object-fit:contain;transition:filter .25s}
+.sticker-button:hover img{filter:drop-shadow(0 0 8px #f5ce8e75)}
+.sticker-button:focus-visible{outline:2px dashed #ffe1ab;outline-offset:5px;border-radius:12px}
+.cake img{clip-path:inset(18% 0 0 0)}
+.cake.is-lit img{clip-path:none}
+.flame{position:absolute;top:var(--fy);left:var(--fx);height:9%;width:3%;background:radial-gradient(ellipse at 50% 70%,#fff9c5 0 25%,#ffe96b 40%,#ff9d26 65%,transparent 75%);border-radius:65% 35% 55% 45%;filter:drop-shadow(0 0 5px #ffb12c);opacity:0;pointer-events:none;transform:translateX(-50%)}
+.is-lit .flame{opacity:1;animation:candle-flicker .65s infinite alternate;animation-delay:var(--delay)}
+.disco.is-spinning img{animation:disco-spin 2.5s linear infinite}
+.cat.is-dancing img{animation:cat-dance .8s ease-in-out infinite}
+@keyframes candle-flicker{from{scale:.85 1;rotate:-6deg;filter:drop-shadow(0 0 4px #ffb12c)}to{scale:1.1 .85;rotate:7deg;filter:drop-shadow(0 0 9px #ffb12c)}}
+@keyframes disco-spin{to{transform:rotate(360deg)}}
+@keyframes cat-dance{0%,100%{transform:translate(0,0) rotate(-7deg)}25%{transform:translate(-7%,-10%) rotate(5deg)}50%{transform:translate(0,0) rotate(9deg)}75%{transform:translate(7%,-10%) rotate(-5deg)}}
+.photo-dialog{width:min(94vw,650px);max-height:90svh;overflow:auto;background:#500d22;color:#fff2df;border:1px solid #e4b69260;border-radius:18px;padding:48px 20px 25px;text-align:center;box-shadow:0 25px 100px #17000cc0}
+.photo-dialog::backdrop{background:#170009c9;backdrop-filter:blur(8px)}
+.close-photos{position:absolute;right:12px;top:7px;background:none;border:0;color:#fff2df;font-size:32px;cursor:pointer;padding:4px 10px}
+.photo-stack{display:flex;align-items:center;justify-content:center;padding:40px 4px 20px}
+.snapshot{background:#fff8eb;padding:10px 10px 24px;box-shadow:0 8px 24px #16000b66;width:34%;margin:0 -2%;rotate:var(--tilt);animation:snapshot-pop .65s cubic-bezier(.2,.8,.2,1.15) both;animation-delay:var(--delay)}
+.snapshot img{width:100%;height:150px;object-fit:contain;display:block;background:#f0e7d8}.snapshot figcaption{font:italic 16px Georgia,serif;color:#6b2437;padding-top:12px}
+.photo-note{font:italic 16px Georgia,serif;color:#e6c6bf}
+@keyframes snapshot-pop{from{opacity:0;transform:translateY(130px) scale(.1) rotate(-20deg)}to{opacity:1;transform:translateY(0) scale(1) rotate(0)}}
+@media(max-width:600px){.snapshot{padding:7px 7px 17px}.snapshot img{height:110px}.snapshot figcaption{font-size:12px}.photo-stack{padding-top:28px}.cake{width:65%;left:17.5%}}
+@media(prefers-reduced-motion:reduce){.disco.is-spinning img,.cat.is-dancing img,.is-lit .flame{animation:none!important}}
+
+/* Simple special-delivery first screen, inspired by the supplied reference. */
+body:not(.opened){--paper:#790500;background:#790500}
+body:not(.opened):before{opacity:.07}
+body:not(.opened) .page-frame{max-width:520px;padding:0 12px}
+header{border:0;height:25px;flex-basis:25px;justify-content:flex-end;align-items:center}
+.sender{color:#fff2df;font-size:9px;letter-spacing:.2px}
+body:not(.opened) main{padding:18px 0 0}
+body:not(.opened) .intro{position:relative;z-index:4;animation:copy-pop .6s 1.65s both}
+body:not(.opened) h1{font-family:'DM Sans',Arial,sans-serif;font-size:clamp(25px,7vw,38px);font-weight:400;line-height:1.2;letter-spacing:0;color:#fff0df;text-align:left;margin:0 4px}
+body:not(.opened) .stage{margin:0;flex:1 1 0;width:100%}
+.gift{width:min(153cqw,141cqh);top:48%}
+.gift .box-base,.gift .box-lid{filter:none}
+.gift-shadow{display:none}
+.click-note{bottom:5%;font-size:17px;line-height:1.4;color:#fff1e6;letter-spacing:0}
+.s-one{left:3%;top:17%;font-size:19px;color:#e9be7d;opacity:.8}
+.s-two{right:5%;top:9%;font-size:14px;color:#f8d3bd;opacity:.85}
+.s-three{right:2%;bottom:20%;font-size:15px;color:#e9be7d;opacity:.8}
+.mini-heart,.mini-dot{position:absolute;pointer-events:none;color:#f5c2a6;font-size:14px;opacity:.7}
+.mini-heart{left:6%;bottom:17%;rotate:-15deg}
+.mini-dot{right:12%;top:22%;font-size:9px}
+.opened .mini-heart,.opened .mini-dot{display:none}
+@media(min-width:700px){
+ body:not(.opened) .page-frame{max-width:650px;padding:0 24px}
+ body:not(.opened) main{padding-top:20px}
+ body:not(.opened) h1{font-size:38px}
+ .gift{width:min(145cqw,135cqh)}
+}
+@media(max-height:650px){
+ body:not(.opened) main{padding-top:12px}
+ body:not(.opened) h1{font-size:clamp(23px,4.6svh,32px)}
+ .click-note{font-size:15px;bottom:4%}
+}
+
+/* Opened view: a full-screen birthday scrapbook matching the reference. */
+body.opened{background:#790500}
+.opened .page-frame{max-width:460px;height:100svh;padding:0;background:linear-gradient(to bottom,#fff 0 74%,#790500 74% 100%)}
+.opened header{display:none}
+.opened main{padding:0;width:100%;height:100%;position:relative;display:block}
+.opened .stage{position:absolute;inset:0 0 12%;width:100%;height:88%;margin:0;max-width:none;container-type:size}
+.opened .collage{inset:0;overflow:hidden;container-type:size}
+.opened .after{position:absolute;bottom:0;left:0;right:0;height:12%;padding:0 8px;display:flex;align-items:center;justify-content:center;animation:copy-pop .6s 1s both}
+.opened .after p:not(.eyebrow){color:#fff5ed;font:400 12px/1.4 'DM Sans',Arial,sans-serif;margin:0;max-width:none}
+.opened .piece{filter:none}
+.opened .birthday{width:96%;height:25%;left:2%;top:26%;--angle:0deg;--center-x:50cqw;--center-y:38.5cqh;z-index:4}
+.opened .camera{width:63%;height:29%;left:-4%;top:-2%;bottom:auto;--angle:-14deg;--center-x:27.5cqw;--center-y:12.5cqh;z-index:3}
+.opened .disco{width:30%;height:19%;left:auto;right:4%;top:6%;--angle:0deg;--center-x:81cqw;--center-y:15.5cqh;z-index:3}
+.opened .love{width:35%;height:37%;right:-1%;top:47%;--angle:4deg;--center-x:83.5cqw;--center-y:65.5cqh;z-index:3}
+.opened .cat{width:34%;height:29%;left:-7%;right:auto;top:50%;bottom:auto;--angle:-8deg;--center-x:10cqw;--center-y:64.5cqh;z-index:4}
+.opened .cake{width:94%;height:40%;aspect-ratio:auto;left:3%;bottom:0;--angle:0deg;--center-x:50cqw;--center-y:80cqh;z-index:5}
+.opened .cake img{object-fit:fill}
+.opened .party-star,.opened .party-heart{display:none}
+.opened .sticker-button:focus-visible{outline:2px dashed #b02c30;outline-offset:-4px}
+.opened .sticker-button:hover img{filter:drop-shadow(0 0 7px #ffd17380)}
+@media(min-width:700px){.opened .page-frame{max-width:min(540px,62svh)}.opened .after p:not(.eyebrow){font-size:14px}}
+@media(max-height:650px){.opened .after{padding:0 6px}.opened .after p:not(.eyebrow){font-size:11px}}
+
+/* Anticipation, a glowing lid lift, then a theatrical scrapbook burst. */
+.opening .gift{animation:anticipation 1.7s ease-in-out both}
+.opening .box-lid{animation:dramatic-lid 1.7s cubic-bezier(.2,.7,.25,1) both}
+.opening .box-base{animation:dramatic-base 1.7s ease both}
+.box-parts:before{content:'';position:absolute;inset:14% 8% 5%;z-index:-1;opacity:0;border-radius:50%;background:radial-gradient(ellipse,#fff2b9 0,#ffb34870 35%,transparent 70%);pointer-events:none}
+.opening .box-parts:before{animation:gift-glow 1.7s ease both}
+.opening .intro{transition:opacity .4s;opacity:.25}
+.opened .stage{animation:reveal-impact .85s ease-out both}
+.opened .piece{animation:dramatic-burst 1.15s cubic-bezier(.18,.75,.22,1.05) both;animation-delay:calc(.12s + var(--i,0)*.13s)}
+.opened .after{animation:copy-pop .7s 1.7s both}
+.opened .collage:after{content:'';position:absolute;inset:0;z-index:8;pointer-events:none;background:radial-gradient(ellipse at 50% 70%,#fff3ca,#fff9edb0 30%,transparent 75%);animation:reveal-flash .85s ease-out both}
+.confetto{animation-duration:3s;width:7px;height:15px}
+.opened .disco img{filter:drop-shadow(0 0 6px #fff3b070)}
+.opened .disco.is-spinning img{animation:disco-spin 1.5s linear infinite}
+@keyframes anticipation{
+ 0%,15%{transform:translate(-50%,-50%) rotate(0) scale(1)}
+ 24%{transform:translate(-50%,-50%) rotate(-4deg) scale(.97)}
+ 32%{transform:translate(-50%,-50%) rotate(5deg) scale(1.02)}
+ 41%{transform:translate(-50%,-50%) rotate(-5deg) scale(.97)}
+ 50%{transform:translate(-50%,-50%) rotate(3deg) scale(1.03)}
+ 65%{transform:translate(-50%,-50%) rotate(0) scale(1.1)}
+ 100%{transform:translate(-50%,-50%) rotate(0) scale(1.05)}
+}
+@keyframes dramatic-lid{
+ 0%,47%{transform:translateY(0) rotate(0);opacity:1}
+ 58%{transform:translateY(-5%) rotate(-5deg);opacity:1}
+ 78%{transform:translate(10%,-38%) rotate(24deg);opacity:1}
+ 100%{transform:translate(26%,-95%) rotate(48deg);opacity:0}
+}
+@keyframes dramatic-base{
+ 0%,65%{transform:scale(1);opacity:1}
+ 80%{transform:translateY(4%) scale(1.05,.95);opacity:1}
+ 100%{transform:translateY(20%) scale(.6);opacity:0}
+}
+@keyframes gift-glow{0%,30%{opacity:0;transform:scale(.5)}65%{opacity:1;transform:scale(1.35)}100%{opacity:0;transform:scale(2)}}
+@keyframes reveal-flash{0%{opacity:.9}100%{opacity:0}}
+@keyframes reveal-impact{0%{transform:scale(1.045) rotate(-1deg)}35%{transform:scale(.985) rotate(.6deg)}70%{transform:scale(1.008) rotate(-.2deg)}100%{transform:scale(1) rotate(0)}}
+@keyframes dramatic-burst{
+ 0%{opacity:0;translate:calc(50cqw - var(--center-x)) calc(65cqh - var(--center-y));scale:.02;rotate:-32deg}
+ 55%{opacity:1;scale:1.14;rotate:8deg}
+ 76%{scale:.95;rotate:-4deg}
+ 100%{opacity:1;translate:0 0;scale:1;rotate:0deg;transform:rotate(var(--angle))}
+}
+@media(prefers-reduced-motion:reduce){
+ .opening .gift,.opening .box-lid,.opening .box-base,.opening .box-parts:before,.opened .stage,.opened .piece,.opened .after,.opened .collage:after{animation-duration:.01ms!important;animation-delay:0ms!important}
+ .opening .intro{transition:none}
+ .opened .collage:after{display:none}
+}
+
+/* A movable, paper-and-tape scrapbook inside the camera popup. */
+.photo-dialog{width:min(94vw,760px);height:min(92svh,900px);max-height:92svh;overflow:hidden;padding:52px 16px 18px;background-color:#f4ead8;background-image:repeating-linear-gradient(0deg,transparent 0 27px,#b79b7420 27px 28px);border:7px solid #dbc6a4;border-radius:5px;color:#682a37;box-shadow:0 30px 100px #16000b99;display:none;flex-direction:column}
+.photo-dialog[open]{display:flex}
+.photo-dialog>.eyebrow{color:#73283b;font:italic 28px Georgia,serif;letter-spacing:-.5px;margin:0 0 12px;text-align:left;flex:0 0 auto}
+.close-photos{color:#73283b;z-index:1000;right:7px;top:3px}
+.photo-stack{position:relative;display:block;flex:1;min-height:0;width:100%;padding:0;margin:0;isolation:isolate}
+.photo-stack:before{content:'a day to remember ?';position:absolute;left:25%;top:46%;font:italic 21px Georgia,serif;color:#a87e6a;rotate:-7deg;pointer-events:none}
+.snapshot{position:absolute;width:37%;margin:0;padding:8px 8px 16px;background:#fffaf0;box-shadow:2px 5px 10px #54372835;rotate:var(--tilt);cursor:grab;touch-action:none;user-select:none;animation:scrapbook-arrive .5s ease-out both;animation-delay:var(--delay);transform-origin:center;transition:box-shadow .15s}
+.snapshot:before{content:'';position:absolute;z-index:2;width:43%;height:20px;left:28%;top:-9px;background:#c9ac7990;rotate:-5deg;clip-path:polygon(3% 0,97% 3%,100% 91%,0 100%);pointer-events:none}
+.snapshot:nth-child(3n):before{background:#b9768260;rotate:7deg}
+.snapshot:nth-child(2n):before{background:#a7b2a373}
+.snapshot img{width:100%;height:clamp(65px,12svh,130px);object-fit:contain;pointer-events:none;background:#ede3d1}
+.snapshot figcaption{font:italic clamp(11px,2.5vw,16px)/1.2 Georgia,serif;padding-top:9px;color:#753247;pointer-events:none}
+.snapshot.dragging{cursor:grabbing;box-shadow:4px 14px 25px #54372865}
+.snapshot:focus-visible{outline:2px dashed #8c3046;outline-offset:5px}
+.photo-note{flex:0 0 auto;font:italic 14px Georgia,serif;color:#8b5261;margin:18px 0 0}
+@keyframes scrapbook-arrive{from{opacity:0;transform:translateY(25px) scale(.85)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(min-width:650px){.snapshot{width:29%}.photo-stack{max-width:650px;margin:auto}.snapshot img{height:clamp(70px,11svh,125px)}}
+@media(max-height:600px){.photo-dialog{padding-top:35px}.photo-dialog>.eyebrow{font-size:23px}.snapshot{padding:5px 5px 10px}.snapshot img{height:9svh}.snapshot figcaption{font-size:10px;padding-top:5px}.photo-note{margin-top:10px;font-size:12px}}
+
+/* Layered photo collage: rough cutouts, full-bleed memories, handwritten scraps. */
+.photo-dialog{width:min(96vw,570px);height:94svh;max-height:94svh;border:0;padding:0;border-radius:3px;background:#372d25;overflow:hidden;isolation:isolate}
+.close-photos{position:absolute;right:9px;top:8px;width:38px;height:38px;padding:0;border-radius:50%;background:#241811b5;color:#fff;z-index:1000;font-size:28px;backdrop-filter:blur(5px)}
+.scrapbook-tools{position:absolute;left:12px;top:12px;z-index:1000}
+.add-photos{display:block;background:#fff9eae8;color:#49332d;padding:9px 13px;font:italic 13px Georgia,serif;rotate:-3deg;cursor:pointer;box-shadow:0 3px 8px #0004}
+.photo-stack{position:absolute;inset:0;width:100%;height:100%;min-height:0;background:linear-gradient(135deg,#805342,#2e3b32 35%,#a58359 70%,#3e2527);overflow:hidden}
+.photo-stack:before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(25deg,transparent 0 90px,#eedfc51a 91px 92px);rotate:0}
+.snapshot{width:56%;height:36%;padding:0;margin:0;background:#fff7e6;rotate:var(--tilt);box-shadow:0 5px 10px #0005;border:4px solid #fff6e4;clip-path:polygon(0 1%,8% 0,15% 1%,24% 0,33% 1%,42% 0,51% 1%,61% 0,72% 1%,82% 0,92% 1%,100% 0,99% 12%,100% 25%,99% 37%,100% 50%,99% 64%,100% 76%,99% 88%,100% 100%,89% 99%,77% 100%,65% 99%,52% 100%,40% 99%,28% 100%,16% 99%,0 100%,1% 86%,0 74%,1% 61%,0 49%,1% 37%,0 24%,1% 12%)}
+.snapshot:nth-child(2n){height:49%;width:57%}
+.snapshot:nth-child(3n){height:34%}
+.snapshot:before{display:none}
+.snapshot img{width:100%;height:100%;max-height:none;object-fit:contain;background:linear-gradient(150deg,#b8956c,#6a5145);padding:8px}
+.snapshot:nth-child(2n) img{background:linear-gradient(150deg,#394438,#a89670)}
+.snapshot:nth-child(3n) img{background:linear-gradient(150deg,#9d7264,#533e35)}
+.has-personal-photos .snapshot img{object-fit:cover;padding:0;background:#645a46}
+.snapshot figcaption{display:none}
+.snapshot.dragging{box-shadow:0 15px 30px #0008}
+.scrapbook-labels{position:absolute;inset:0;pointer-events:none;z-index:900}
+.scrapbook-labels>span{position:absolute;color:#34312b;font:bold italic 25px/1.05 'Playfair Display',Georgia,serif}
+.scrapbook-labels .scrap-love,.scrapbook-labels .scrap-happy,.scrapbook-labels .scrap-day{background:#fffaf0;padding:9px 14px;filter:drop-shadow(0 3px 2px #0003);clip-path:polygon(2% 3%,12% 0,22% 3%,36% 0,49% 3%,64% 0,80% 3%,96% 0,100% 16%,98% 36%,100% 57%,98% 77%,100% 97%,84% 100%,68% 97%,50% 100%,32% 97%,16% 100%,0 97%,2% 70%,0 46%,2% 20%)}
+.scrap-love{right:8%;top:13%;rotate:-14deg}
+.scrapbook-labels .scrap-happy{left:31%;top:47%;font-size:clamp(27px,7vw,42px);rotate:-12deg}
+.scrapbook-labels .scrap-day{left:6%;bottom:17%;font-size:22px;rotate:8deg}
+.scrapbook-labels .scrap-doodle{right:5%;bottom:9%;color:#fff8e2;font-size:33px;rotate:15deg;text-shadow:0 2px 4px #0005}
+.photo-note{position:absolute;bottom:0;left:0;right:0;margin:0;padding:11px 5px;color:#fff9eb;background:#241a18b0;font:italic 12px Georgia,serif;pointer-events:none;z-index:950}
+@media(max-height:600px){.snapshot img{height:100%}.scrapbook-labels .scrap-happy{font-size:28px}.scrapbook-labels .scrap-love{font-size:20px}}
+
+/* Clean Polaroid scrapbook, with orderly rows and draggable cards. */
+.photo-dialog{background:#f1e5d1;border:5px solid #dcc8aa;border-radius:10px;padding:60px 14px 38px;overflow:hidden}
+.photo-stack{position:relative;inset:auto;flex:1;width:100%;height:auto;min-height:0;background:#f1e5d1;overflow:hidden}
+.photo-stack:before{background:radial-gradient(#ac8f6529 .8px,transparent .8px);background-size:8px 8px}
+.scrapbook-labels{display:none}
+.snapshot,.snapshot:nth-child(2n),.snapshot:nth-child(3n){width:29%;height:27%;padding:7px 7px 10px;border:0;clip-path:none;border-radius:1px;background:#fffdf5;box-shadow:1px 4px 10px #593c292b;rotate:var(--tilt)}
+.snapshot img,.snapshot:nth-child(2n) img,.snapshot:nth-child(3n) img{height:calc(100% - 27px);width:100%;padding:5px;background:#e9dfcf;object-fit:contain}
+.has-personal-photos .snapshot img{object-fit:cover;padding:0}
+.snapshot figcaption{display:flex;align-items:center;justify-content:center;height:27px;padding:5px 0 0;font:italic 12px/1.1 Georgia,serif;color:#713d46;text-align:center}
+.snapshot.dragging{box-shadow:3px 12px 22px #593c294d}
+.close-photos{background:transparent;color:#713d46;backdrop-filter:none}
+.add-photos{background:#fffaf0;color:#713d46;rotate:0;border:1px solid #d6c0a0;box-shadow:none;border-radius:4px}
+.photo-note{color:#805563;background:#f1e5d1;font-size:12px;padding:12px 5px}
+@media(max-width:450px){.snapshot,.snapshot:nth-child(2n),.snapshot:nth-child(3n){width:43%;height:22%;padding:6px 6px 9px}.snapshot figcaption{font-size:11px}}
+
+/* Rich red and gold gift invitation, kept within one mobile screen. */
+
+body:not(.opened){background:radial-gradient(ellipse at 50% 48%,#bb0b05 0,#940600 48%,#620400 100%);--paper:#870500}
+body:not(.opened) .page-frame{max-width:560px;padding:0 14px;background:transparent}
+body:not(.opened) header{display:none}
+body:not(.opened) main{padding:clamp(12px,3.5svh,32px) 0 0}
+body:not(.opened) .intro{flex:0 0 auto;animation:copy-pop .75s 1.65s both}
+body:not(.opened) h1{text-align:center;color:#fff6e5;font-weight:400;margin:0;line-height:1}
+.special-script{display:block;font:italic 400 clamp(32px,6.5svh,65px)/1 'Great Vibes','Playfair Display',Georgia,serif;color:#fff7e8}
+.gold-gift{display:block;position:relative;width:max-content;max-width:100%;margin:0 auto;font:italic 600 clamp(65px,13svh,132px)/.95 'Playfair Display',Georgia,serif;letter-spacing:-5px;background:linear-gradient(120deg,#fff5bb 10%,#ffe29b 27%,#bd7629 46%,#ffe7a2 60%,#e5b464 78%,#fff0b7);color:transparent;background-clip:text;-webkit-background-clip:text;filter:drop-shadow(0 2px 1px #5c2003);padding:0 18px 7px 0}
+.gift-rays{position:absolute;right:-20px;top:18%;font:400 23px/.65 Arial,sans-serif;letter-spacing:0;color:#ffe7a1;transform:rotate(-15deg);background:none}
+.for-you{font:400 clamp(17px,3.4svh,29px)/1.2 'DM Sans',sans-serif;color:#fff4e9;margin:8px 0 4px}
+.heart-divider{display:flex;align-items:center;justify-content:center;gap:12px;color:#ffe6a3;font:38px/1 Georgia,serif;height:32px}
+.heart-divider span{display:block;width:23%;height:1px;background:linear-gradient(90deg,transparent,#ffe3a2)}
+.heart-divider span:last-child{transform:rotate(180deg)}
+body:not(.opened) .stage{margin:0;flex:1;min-height:0}
+.gift{width:min(142cqw,125cqh);top:43%;z-index:2}
+.box-parts{filter:drop-shadow(0 12px 8px #2b000044)}
+.enjoy-gift{position:absolute;left:50%;bottom:5%;transform:translateX(-50%);z-index:5;white-space:nowrap;border:2px solid #ffe0a0;border-radius:50px;padding:12px 27px;background:linear-gradient(110deg,#930b00,#a51005);color:#fff8e9;font:400 clamp(15px,2.7svh,23px)/1.2 'DM Sans',sans-serif;box-shadow:0 0 15px #ffc44a24,inset 0 0 9px #ffb35715;cursor:pointer;animation:copy-pop-button .7s 2.15s both}
+.enjoy-gift span{margin-left:13px;color:#ffe5a5}
+.enjoy-gift:hover{background:#bb210c;box-shadow:0 0 22px #ffcf5260}
+.enjoy-gift:focus-visible{outline:2px dashed #fff3c2;outline-offset:5px}
+.opening .enjoy-gift{pointer-events:none;opacity:0;animation:none}
+.s-one{left:4%;top:9%;font-size:25px;color:#ffe5a2}
+.s-two{right:4%;top:18%;font-size:20px;color:#ffe5a2}
+.s-three{right:5%;bottom:27%;font-size:18px;color:#ffe5a2}
+.mini-heart{left:5%;bottom:22%;color:#ffe5a2;font-size:19px}
+.mini-dot{right:8%;top:51%;color:#ffe5a2;font-size:15px;text-shadow:0 0 10px #ffb63d}
+body:not(.opened) .stage:before,body:not(.opened) .stage:after{content:'?';position:absolute;pointer-events:none;color:#ffe6a8;text-shadow:0 0 13px #ffba46;font-size:12px;animation:gold-twinkle 2.6s ease-in-out infinite alternate}
+body:not(.opened) .stage:before{left:2%;top:43%}
+body:not(.opened) .stage:after{right:9%;bottom:18%;animation-delay:-1.4s}
+@keyframes gold-twinkle{from{opacity:.3;scale:.7}to{opacity:1;scale:1.15}}
+@keyframes copy-pop-button{from{opacity:0;transform:translate(-50%,10px) scale(.95)}to{opacity:1;transform:translate(-50%,0) scale(1)}}
+@media(max-height:600px){body:not(.opened) main{padding-top:10px}.special-script{font-size:5.8svh}.gold-gift{font-size:11svh}.for-you{font-size:3svh;margin-top:4px}.heart-divider{height:24px;font-size:29px}.enjoy-gift{padding:9px 20px;bottom:3%}.gift{top:42%;width:min(140cqw,122cqh)}}
+
+/* Final invitation polish: warm metallic type and a soft velvet spotlight. */
+body:not(.opened){background:radial-gradient(ellipse at 50% 58%,#b8150b 0,#900800 44%,#570402 100%)}
+body:not(.opened):after{content:'';position:fixed;inset:0;pointer-events:none;z-index:-1;background:linear-gradient(115deg,transparent 25%,#ffbd7110 49%,transparent 70%)}
+body:not(.opened) .page-frame{position:relative;max-width:580px;padding:0 18px}
+body:not(.opened) main{padding-top:max(20px,env(safe-area-inset-top));padding-bottom:env(safe-area-inset-bottom)}
+body:not(.opened) .intro{position:relative;padding-top:1.5svh}
+.special-script{font-family:'Great Vibes',cursive;font-style:normal;font-size:clamp(38px,7.6svh,78px);line-height:1.06;text-shadow:0 2px 18px #f3ac6330;transform:rotate(-4deg)}
+.gold-gift{font-size:clamp(82px,14.7svh,148px);line-height:.98;font-weight:600;letter-spacing:-6px;padding:0 17px 7px 0;background:linear-gradient(125deg,#fff8cb 5%,#ffe5a0 22%,#e9bb65 40%,#fff0b1 49%,#d49a43 66%,#ffe6a3 85%);background-clip:text;-webkit-background-clip:text;filter:drop-shadow(0 2px 0 #8b400c) drop-shadow(0 6px 12px #36000045)}
+.gift-rays{font-size:21px;right:-20px;top:23%;opacity:.85}
+.for-you{font-size:clamp(17px,3svh,27px);font-weight:400;letter-spacing:.8px;margin:7px 0}
+.heart-divider{gap:14px;height:30px;font-size:34px;opacity:.95}
+.heart-divider span{width:22%;max-width:120px;background:linear-gradient(90deg,transparent,#f2cc88)}
+.gift{width:min(146cqw,128cqh);top:44%}
+.box-parts{filter:drop-shadow(0 15px 13px #33000060)}
+.enjoy-gift{bottom:max(4%,12px);min-height:50px;padding:12px 29px;font-size:clamp(16px,2.5svh,22px);letter-spacing:.3px;border:1.5px solid #f8d998;background:linear-gradient(130deg,#a7140970,#6d050150);box-shadow:0 0 0 3px #edb75d0b,0 4px 25px #30000028,inset 0 1px 0 #ffe2a338;transition:background .2s,box-shadow .2s}
+.enjoy-gift:before,.enjoy-gift:after{content:'';position:absolute;width:45px;height:2px;left:50%;translate:-50% 0;background:linear-gradient(90deg,transparent,#fff7cd,transparent);box-shadow:0 0 8px #ffd276}
+.enjoy-gift:before{top:-2px}.enjoy-gift:after{bottom:-2px;opacity:.55}
+.enjoy-gift span{display:inline-block;transition:translate .2s;margin-left:15px}
+.enjoy-gift:hover span{translate:4px 0}
+.enjoy-gift:hover{background:#b01b0a;box-shadow:0 0 25px #f3b75240,inset 0 0 15px #ffbe5610}
+body:not(.opened) .stage:before,body:not(.opened) .stage:after{content:'\2726';font-size:14px}
+.doodle,.mini-heart,.mini-dot{pointer-events:none;text-shadow:0 0 10px #e8a54955}
+.s-one{top:12%;font-size:24px;opacity:.7}.s-two{top:33%;right:1%;font-size:18px}.s-three{bottom:22%;font-size:14px;opacity:.6}
+.mini-heart{font-size:18px;left:3%;bottom:28%;opacity:.55}
+.mini-dot{right:12%;top:6%;font-size:8px;opacity:.7}
+@media(max-height:650px){
+ body:not(.opened) main{padding-top:12px}
+ body:not(.opened) .intro{padding-top:0}
+ .special-script{font-size:6.6svh}
+ .gold-gift{font-size:12.8svh}
+ .for-you{font-size:2.8svh;margin:4px 0}
+ .heart-divider{height:24px;font-size:28px}
+ .gift{width:min(143cqw,125cqh);top:43%}
+ .enjoy-gift{min-height:44px;padding:9px 22px;bottom:3%;font-size:15px}
+}
+@media(prefers-reduced-motion:reduce){body:not(.opened) .stage:before,body:not(.opened) .stage:after{animation:none}.enjoy-gift,.enjoy-gift span{transition:none}}
+
+/* An asymmetric photo dump: one hero Polaroid and smaller layered memories. */
+.photo-dialog{border:0;border-radius:4px;padding:54px 0 32px;background:#26392c}
+.photo-stack{background:radial-gradient(ellipse at 75% 65%,#a5b9b9 0,#778b7d 27%,transparent 48%),radial-gradient(ellipse at 10% 10%,#496b41,transparent 50%),linear-gradient(145deg,#263b25,#172c22 45%,#7d9387);overflow:hidden}
+.photo-stack:before{background:repeating-linear-gradient(33deg,transparent 0 38px,#d5e0c31a 39px 41px);opacity:.6}
+.snapshot,.snapshot:nth-child(2n),.snapshot:nth-child(3n){padding:6px 6px 0;border:0;background:#fffdf6;box-shadow:0 6px 15px #07160b50;clip-path:none}
+.snapshot img,.snapshot:nth-child(2n) img,.snapshot:nth-child(3n) img{height:calc(100% - 30px);object-fit:contain;background:#e4e4cf;padding:4px}
+.has-personal-photos .snapshot img{object-fit:cover;padding:0}
+.snapshot figcaption{height:30px;font:italic 13px/1.1 Georgia,serif;padding:5px 2px;color:#282b25}
+.snapshot:nth-child(2):after{content:'';position:absolute;top:-10px;right:12px;width:11px;height:43px;border:2px solid #9d9d92;border-radius:10px;rotate:5deg;box-shadow:inset 2px 0 0 #fff9}
+.snapshot:nth-child(5){border-radius:50%;padding:5px;overflow:hidden;background:linear-gradient(135deg,#c5e3d6,#e0bc74)}
+.snapshot:nth-child(5) img{height:100%;border-radius:50%}
+.snapshot:nth-child(5) figcaption{display:none}
+.snapshot:nth-child(5):after{content:'';position:absolute;width:27%;aspect-ratio:1;left:36.5%;top:36.5%;border:9px solid #f9f0dc;border-radius:50%;background:#788c78;box-shadow:0 0 0 3px #40362b;pointer-events:none}
+.scrapbook-labels{display:block;inset:54px 0 32px;z-index:9}
+.scrapbook-labels>span{position:absolute;pointer-events:none;text-shadow:0 2px 2px #14211933}
+.scrapbook-labels .dump-title{left:16%;top:25%;rotate:-13deg;color:#fffced;font:bold 26px/.95 'DM Sans',sans-serif;letter-spacing:-1px;border-bottom:3px solid #fffced;padding-bottom:7px}
+.scrapbook-labels .dump-flower{left:38%;top:2%;color:#fb8ac0;font-size:67px;text-shadow:2px 2px #fcebaa}
+.scrapbook-labels .dump-star{left:4%;top:35%;color:#ffda66;font-size:61px;rotate:-16deg}
+.scrapbook-labels .dump-wow{left:43%;top:36%;color:#7fd3fb;font:bold 40px 'DM Sans',sans-serif;-webkit-text-stroke:2px #fff;rotate:-10deg}
+.scrapbook-labels .dump-heart{right:5%;top:60%;color:#ff9abb;font-size:52px;rotate:14deg}
+.scrapbook-labels .dump-spark{left:32%;bottom:21%;color:#fffbea;font-size:48px;rotate:14deg}
+.scrapbook-tools{top:13px;left:12px}
+.add-photos{background:#fffaf0;color:#334b35;border:0;font-size:13px}
+.close-photos{color:#fffaf0}
+.photo-note{background:#26392c;color:#faf4db;font-size:12px}
+.snapshot:focus-visible{outline-color:#ffdb70}
+@media(max-height:600px){.scrapbook-labels .dump-title{font-size:20px}.scrapbook-labels .dump-flower{font-size:45px}.snapshot figcaption{font-size:10px}}
+
+/* A loose, movable central pile with a visible edge on every card. */
+.snapshot:nth-child(5){border-radius:1px;padding:6px 6px 0;overflow:visible;background:#fffdf6}
+.snapshot:nth-child(5) img{height:calc(100% - 30px);border-radius:0}
+.snapshot:nth-child(5) figcaption{display:flex}
+.snapshot:nth-child(5):after{display:none}
+.scrapbook-labels .dump-title{top:6%;left:12%;font-size:25px}
+.scrapbook-labels .dump-flower{left:auto;right:12%;top:5%;font-size:48px}
+.scrapbook-labels .dump-star{left:1%;top:31%;font-size:37px}
+.scrapbook-labels .dump-wow{left:auto;right:2%;top:30%;font-size:30px}
+.scrapbook-labels .dump-heart{right:3%;top:76%;font-size:35px}
+.scrapbook-labels .dump-spark{left:9%;bottom:4%;font-size:34px}
+.snapshot{touch-action:none;cursor:grab}
+.snapshot.dragging{cursor:grabbing}

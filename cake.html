@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+ <meta name="theme-color" content="#3e131b"><meta name="description" content="A birthday surprise, one little moment at a time.">
+ <title>Make a birthday wish</title>
+ <link rel="stylesheet" href="birthday.css?v=6"><script src="birthday-shared.js?v=9" defer></script><script src="cake.js?v=12" defer></script>
+ <link rel="stylesheet" href="theme.css?v=1">
+ <link rel="stylesheet" href="birthday-polish.css?v=2"><script src="birthday-polish.js?v=3" defer></script>
+ <link rel="stylesheet" href="cake-polish.css?v=6">
+ <link rel="stylesheet" href="keepsakes.css?v=1">
+ <link rel="stylesheet" href="birthday-background.css?v=10">
+</head>
+<body>
+ <main class="birthday-story" id="story">
+  <section class="scene active cake-scene" id="cakeScene" aria-label="Make a birthday wish">
+   <div class="cake-lace-border" aria-hidden="true"></div>
+   <h2 class="wish-heading" id="wishHeading">Make a wish.<span>A whole new chapter.</span></h2>
+   <h1 class="birthday-heading" id="birthdayHeading" hidden><span>Happy<br>Birthday</span><em>For you, AAFRHA.</em></h1>
+   <div class="cake-position"><div class="cake-art"><img id="cakeImage" src="assets/cake-swirl-candles.png" alt="Ivory cake with maroon piping and gold swirly candles"></div></div>
+   <div class="cake-instructions" id="cakeInstructions"><p id="micStatus" role="status">Close your eyes. Make it a good one.</p><button class="text-button" id="enableMic">Tap here and blow near the microphone</button><div class="breath-meter" id="breathMeter" hidden><span id="breathLevel"></span></div><button class="text-button fallback" id="blowButton">or tap here to make your wish</button></div>
+   <div class="wish-dimmer" aria-hidden="true"></div>
+   <p class="wish-message" id="wishMessage" hidden>May your wish find its way to you.</p>
+   <button class="text-button next-gift" id="nextGift" hidden>Open your birthday gift &rarr;</button>
+  </section>
+  <p class="sr-only" id="announcement" role="status" aria-live="polite"></p>
+ </main>
+ <div id="confetti" aria-hidden="true"></div>
+</body>
+</html>

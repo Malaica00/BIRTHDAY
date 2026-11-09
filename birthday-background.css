@@ -1,0 +1,26 @@
+/* Match the puzzle red across the birthday journey. */
+:root{--red:#3e131b;--birthday-background:#3e131b;--birthday-lace:url('assets/birthday-lace.jpg')}
+html{background:var(--birthday-background)}
+body,body:has(.birthday-story),body:has(.book){background:var(--birthday-background)}
+.birthday-story,.scene,.collage-scene{background:transparent}
+.scratch-intro{background:var(--birthday-background)}
+.scratch-intro:before{background-image:var(--birthday-lace);opacity:.055}
+
+/* Larger main headings after removing the small invitation header. */
+.cake-scene .wish-heading{top:10%;left:4%;right:4%;font-size:20cqw;line-height:.98;text-wrap:balance}
+.cake-scene .birthday-heading{top:12%}
+.cake-scene .birthday-heading>span{font-size:15cqw;line-height:.98}
+.gift-scene h2{top:15%;font-size:18cqw;line-height:1.02}
+@media(max-height:650px){.cake-scene .wish-heading{font-size:19cqw}.cake-scene .birthday-heading>span{font-size:13cqw}.gift-scene h2{font-size:16cqw}}
+
+.cake-scene .cake-instructions{bottom:11.5%}
+
+/* Matching dark lace edges around the remaining birthday pages. */
+.page-lace-border{position:absolute;inset:0;z-index:0;pointer-events:none;background:#3e131b url('assets/birthday-lace.jpg') center/cover no-repeat;background-blend-mode:multiply;opacity:.65;-webkit-mask-image:radial-gradient(ellipse at center,transparent 44%,#000 84%);mask-image:radial-gradient(ellipse at center,transparent 44%,#000 84%)}
+.gift-scene h2{z-index:1}
+.scrapbook-lace-border{position:fixed;z-index:0}
+body:has(.book)>.topbar,body:has(.book)>main{position:relative;z-index:1}
+
+/* One muted burgundy across page backgrounds and supporting views. */
+.book-cover,.camera-dialog{background:var(--birthday-background)}
+.camera-dialog::backdrop{background:#17080ce8}
